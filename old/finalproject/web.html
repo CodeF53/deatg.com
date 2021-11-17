@@ -1,0 +1,282 @@
+<!doctype HTML>
+<html lang="en">
+   <head>
+      <title>Web Evolution</title>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width"/>
+      <link href="web_style.css" rel="stylesheet" type="text/css" />
+      <!-- For the Windows 98 look, I used the 98.css library from https://jdan.github.io/98.css/ -->
+      <!-- Instead of linking to the css file on the internet, I downloaded it and included it with this project so it can be used without an internet connection -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/98.css" /> -->
+      <link rel="stylesheet" href="resources/98.css" />
+      <link rel="shortcut icon" href="resources/IEFavicon.png" />
+   </head>
+
+   <body onload="BeginUpdateTime()">
+
+      
+      
+      <br>
+      
+      <div id="notepad-window" class="window1 window" >
+         <div class="title-bar" >
+            <div class="title-bar-text">Notepad</div>
+            <div class="title-bar-controls">
+               <button aria-label="Minimize" onclick="changeWindowState('Notepad')"></button>
+               <button aria-label="Maximize"></button>
+               <button aria-label="Close"></button>
+            </div>
+         </div>
+         <img src="resources/NotepadMenu.png">
+         <div id="notepad-area">
+            <textarea rows="20" cols="52"></textarea>
+         </div>
+      </div>
+
+      <div id="controlpanel-window"class="window2 window" >
+         <div class="title-bar">
+            <div class="title-bar-text">Display Properties</div>
+            <div class="title-bar-controls">
+               <button aria-label="Minimize" onclick="changeWindowState('ControlPanel')"></button>
+               <button aria-label="Maximize"></button>
+               <button aria-label="Close"></button>
+            </div>
+         </div>
+         <div class="window-body">
+            <img src="resources/MonitorBlue.png" id="monitor">
+            <div id="wallpaper-box">
+               <p id>Wallpaper</p>
+               <form>
+                  <select id="select-box">
+                     <option>Blue</option>
+                     <option>Carved Stone</option>
+                     <option>Circles</option>
+                     <option>Red Cubes</option>
+                     <option>Waves</option>
+                     <option >Windows XP</option>
+                   </select>
+                   <br><br><br>
+                   <button type="button" onclick="(changeBG())" style="float: right;">Apply</button>
+               </form>
+               
+            </div>
+         </div>
+      </div>
+
+      <div id="paint-window" class="window3 window" >
+         <div class="title-bar">
+            <div class="title-bar-text">untitled - Paint</div>
+            <div class="title-bar-controls">
+               <button onclick="changeWindowState('Paint')" aria-label="Minimize"></button>
+               <button aria-label="Maximize"></button>
+               <button aria-label="Close"></button>
+            </div>
+         </div>
+         <div id="paint-img" class="window-body not-taskbar">
+            <img src="resources/MSPaint.png">
+         </div>
+      </div>
+
+      <br>
+      
+      <div id="ie-window" class="window4 window" >
+         <div class="title-bar">
+            <div class="title-bar-text">News</div>
+            <div class="title-bar-controls">
+               <button onclick="changeWindowState('IE')" aria-label="Minimize"></button>
+               <button aria-label="Maximize"></button>
+               <button aria-label="Close"></button>
+            </div>
+         </div>
+         <div class="window4-body window-body not-taskbar">
+            <img src="resources/InternetExplorerMenu.png">
+            <div id="ie-content">
+               <div id="main-content">
+                  <div id="ie-left-column">
+                     <h1>The Evolution of the Web</h1>
+                                                                <!--why is "align" red?-->
+                     <img src="resources/PacificGP.png" id="web1image" align="right">
+                     <p>
+                        The internet has become a very important part of our daily lives. It's used for entertainment, education, shopping, and much much more. 
+                        Anyone with an internet connection has access to millions of pages of information, and the web can even support utilies such as file converters 
+                        or video editors that users can access with nothing but a web browser. 
+                     </p>
+                     <h2>Web 1.0</h2>
+                     <p>
+                        The first stage of the internet only consisted of static, unchanging websites with little CSS. The content on the page is limited to what the website 
+                        owner uploads, so they would need to re-upload their files to the web server in order for the website to change.
+                     </p>
+                     
+                     <h2>Web 2.0</h2>
+                     <img src="resources/OldYouTube.png" id="web2image" align="right">
+                     <p>
+                        In Web 2.0, sites were able to be automatically updated from user input, which means users can post their own content on sites like YouTube and MySpace.
+                        AJAX and JavaScript frameworks can also be used to create responsive, interactive content, as well as web applications which can perform a variety of functions. 
+                        Web 2.0 also works with the cloud, which is really just vast data centers around the world storing all kinds of data from user login information to personal files
+                        stored in cloud storage services such as Google Drive.
+                     </p><br><br><br><br>
+                     <h2>Web 3.0</h2>
+                     <p>
+                        Web 3.0 is known as the Semantic Web. Semantic Web means that the information on websites can be automatically read by machines, as well as being able to
+                        be understood naturally by humans. Web 3.0 also makes way for websites to create APIs, which is a way to communicate with the website programmatically.
+                        Web 3.0 is home to even more features, such as behavioural advertising, applications using AI, and even more advanced content.
+                     </p>
+                     <img src="resources/Web3.0.png" id="web3image">
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+      <div id="start-menu" class="window">
+         <form action="index.html"> <button type="submit">Home</button> </form>
+         <form action="web.html"> <button type="submit">History of the Web</button> </form>
+         <form action="iot.html"> <button type="submit">Internet of Things</button> </form>
+         <form action="dogecoin.html"> <button type="submit">Dogecoin</button> </form>
+         <form action="ar.html"> <button type="submit">Augmented Reality</button> </form>
+      </div>
+
+
+      <br>
+      <br>
+      <br><br><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="taskbar window">
+         <div class="window-body taskbar-items">
+            <button onclick="toggleStartMenu()"><span><img src="resources/start2.png"></span></button>
+            <button onclick="changeWindowState('IE')"><img src="resources/InternetExplorerTaskbar.png"></button>
+            <button onclick="changeWindowState('Notepad')"><img src="resources/NotepadTaskbar.png"></button>
+            <button onclick="changeWindowState('Paint')"><img src="resources/PaintTaskbar.png"></button>
+            <!-- <button><img src="resources/MyComputerTaskbar.png"></button> -->
+            <button onclick="changeWindowState('ControlPanel')"><img src="resources/ControlPanelTaskbar.png"></button>
+            <button id="time" style="float: right;"><span>11:37</span></button>
+            <img style="float: right;" src="resources/separater2.png">
+         </div>
+      </div>
+
+
+<script>
+
+var bgcolors = ["#21DE9C", "#296BB5", "#000052", "#D6F7FF", "#42A5D6", "#0000FF", "#00FF00", "#FF0000", "#F7F7F7", "#848484", "#FF00FF", "#A52963", "#10FF8C", "#C67BCE", "#D67BFF", "#10FF8C", "#EF8CDE", "#FF9452", "#4A9CCE", "#63F7F7", "#ADBDD6", "#DEFACE", "#DABBED", "#BEEFED", "#FACADE", "#DECADE", "#94EFD6", "#155FD9", "#6C0700", "#FF8170", "#FFCCC5", "#E88833", "#EADB84", "#A6846A", "#FF7AFF", "#8AD1FB", "#5B799F", "#FFD737", "#4EA8FE", "#FA7123", "#5EA24B", "#008080", "#008080", "#035ED0", "#03329E", "#45B5FF", "#7FE5FC", "#D15D9C", "#A8B3AB", "#FFA7A5", "#2964EE", "#789C20", "#F6F4F5", "#344620", "#6DA9B1", "#F5ED9C", "#25E9FF", "#74F72F", "#FFFF2E", "#00B01A", "#000A0F", "#0D1949", "#000219", "#0016A0", "#E04711", "#DCAA10", "#A45010", "#0D8020", "#AB65DC", "#E0A88D", "#EB123E"]
+
+
+function toggleStartMenu() {
+   var temp = document.getElementById("start-menu");
+   if (temp.style.display === "none") {
+      temp.style.display = "block";
+   } else {
+      temp.style.display = "none";
+   }
+}
+
+function changeWindowState(window) {
+
+   switch (window) {
+      case "IE":
+         var temp = document.getElementById("ie-window");
+         if (temp.style.display === "none") {
+            temp.style.display = "block";
+         } else {
+            temp.style.display = "none";
+         }
+         break;
+      case "Notepad":
+         var temp = document.getElementById("notepad-window");
+         if (temp.style.display === "none") {
+            temp.style.display = "block";
+         } else {
+            temp.style.display = "none";
+         }
+         break;
+      case "ControlPanel":
+         var temp = document.getElementById("controlpanel-window");
+         if (temp.style.display === "none") {
+            temp.style.display = "block";
+         } else {
+            temp.style.display = "none";
+         }
+         break;
+      case "Paint":
+         var temp = document.getElementById("paint-window");
+         if (temp.style.display === "none") {
+            temp.style.display = "block";
+         } else {
+            temp.style.display = "none";
+         }
+         break;
+   }
+
+}
+
+function changeBG() {
+var image = document.getElementById("select-box").value;
+
+  switch (image)  {
+
+      case "Blue":
+          document.body.style.backgroundImage = "url('resources/Windows98.png')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorBlue.png";
+          break;
+          
+      case "Carved Stone":
+          document.body.style.backgroundImage = "url('resources/CarvedStone.bmp')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorCarvedStone.png";
+          break;
+          
+      case "Circles":
+          document.body.style.backgroundImage = "url('resources/Circles.bmp')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorCircles.png";
+          break;
+          
+      case "Red Cubes":
+          document.body.style.backgroundImage = "url('resources/RedBlocks.bmp')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorRedCubes.png";
+          break;
+          
+      case "Waves":
+          document.body.style.backgroundImage = "url('resources/Waves.bmp')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorWaves.png";
+          break;
+
+      case "Windows XP":
+          document.body.style.backgroundImage = "url('Resources/WindowsXP.jpg')";
+          document.body.style.backgroundSize = "auto";
+          document.getElementById("monitor").src = "resources/MonitorWindowsXP.png";
+          break;
+  }
+  
+}
+   function BeginUpdateTime() {
+      setInterval(function() {
+         UpdateTime();
+      }, 1000);
+   }
+
+   	
+   
+   function UpdateTime() {
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes();
+      document.getElementById("time").innerHTML = time;
+   }
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>

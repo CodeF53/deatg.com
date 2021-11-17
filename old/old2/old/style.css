@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(-45deg, lightcyan, lightgray);
+    display:inline;
+}
+
+.grid {
+  border: 2px rgb(67, 77, 85) solid;
+  width: 700px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.25fr 0.9fr 0.25fr;
+  grid-template-rows: 0.085fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.box {
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 5px;
+  border: 2px rgb(40, 100, 128) solid;
+}
+
+.url {
+     font-size: 10px;
+}
+
+.ok {
+    font-family: cursive;
+}
+
+#dk {
+    height: 8px;
+    width: 704px;
+}
+
+.mtext {
+  font-size: 600px;
+}
+

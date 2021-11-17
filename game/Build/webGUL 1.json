@@ -1,0 +1,17 @@
+{
+"companyName": "deatg?",
+"productName": "game of deatg version 100",
+"productVersion": "100",
+"dataUrl": "webGUL 1.data.unityweb",
+"wasmCodeUrl": "webGUL 1.wasm.code.unityweb",
+"wasmFrameworkUrl": "webGUL 1.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "webGUL 1.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.1f1"
+}

@@ -1,0 +1,28 @@
+<audio id="1"> <source src="audio/bgm.ogg" > </audio>
+    <audio id="2"> <source src="audio/boag.mp3"> </audio>
+    <audio id="3"> <source src="audio/e.mp3"   > </audio>
+
+<p></p>
+
+<script>
+
+var len = 3
+var x = ran(1, len);
+var myMusic= document.getElementById(x);
+
+//console.log(len)
+
+function ran(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function play() {
+myMusic.play();
+}
+
+function pause() {
+myMusic.pause();
+}
+</script>

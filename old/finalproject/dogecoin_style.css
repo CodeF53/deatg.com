@@ -1,0 +1,290 @@
+#main-content {
+    background-image: url("resources/LowResSpace2.jpg");
+    width: 60%;
+    margin: auto;
+    border: 20px solid black;
+    border-radius: 50px;
+}
+
+#navbar {
+    background-image: url("resources/LowResRainbow.jpg");
+    line-height: 53px;
+}
+
+#navbar > a {
+    background-color: rebeccapurple;
+    color: seashell
+}
+
+#DogecoinLogo {
+    width: 40%;
+}
+
+#doge-message {
+    z-index: 999;
+    position: absolute;
+}
+
+#DogecoinGif {
+    float: right;
+    width: 40%;
+}
+
+h1 {
+    font-family: cursive;
+    color: #00FF00;
+}
+
+p {
+    font-family: cursive;
+    color: red;
+    font-size: 20px;
+}
+
+body {
+    animation:color-change 150s infinite;
+}
+
+/* this could probably be done with javascript instead */
+@keyframes color-change {
+    1.4%  { background-color: #21DE9C }
+    2.8%  { background-color: #296BB5 }
+    4.19% { background-color: #000052 }
+    5.6%  { background-color: #D6F7FF }
+    7%    { background-color: #42A5D6 }
+    8.4%  { background-color: #0000FF }
+    9.8%  { background-color: #00FF00 }
+    11.2% { background-color: #FF0000 }
+    12.6% { background-color: #F7F7F7 }
+    14.0% { background-color: #848484 }
+    15.4% { background-color: #FF00FF }
+    16.%  { background-color: #A52963 }
+    18.%  { background-color: #10FF8C }
+    19.5% { background-color: #C67BCE }
+    20.9% { background-color: #D67BFF }
+    22.3% { background-color: #10FF8C }
+    23.7% { background-color: #EF8CDE }
+    25.1% { background-color: #FF9452 }
+    26.5% { background-color: #4A9CCE }
+    27.9% { background-color: #63F7F7 }
+    29.3% { background-color: #ADBDD6 }
+    30.7% { background-color: #DEFACE }
+    32.1% { background-color: #DABBED }
+    33.5% { background-color: #BEEFED }
+    34.9% { background-color: #FACADE }
+    36.3% { background-color: #DECADE }
+    37.7% { background-color: #94EFD6 }
+    39.1% { background-color: #155FD9 }
+    40.5% { background-color: #6C0700 }
+    41.9% { background-color: #FF8170 }
+    43.3% { background-color: #FFCCC5 }
+    44.7% { background-color: #E88833 }
+    46.1% { background-color: #EADB84 }
+    47.5% { background-color: #A6846A }
+    48.9% { background-color: #FF7AFF }
+    50.3% { background-color: #8AD1FB }
+    51.7% { background-color: #5B799F }
+    53.1% { background-color: #FFD737 }
+    54.5% { background-color: #4EA8FE }
+    55.9% { background-color: #FA7123 }
+    57.3% { background-color: #5EA24B }
+    58.7% { background-color: #008080 }
+    60.1% { background-color: #008080 }
+    61.5% { background-color: #035ED0 }
+    62.9% { background-color: #03329E }
+    64.3% { background-color: #45B5FF }
+    65.7% { background-color: #7FE5FC }
+    67.1% { background-color: #D15D9C }
+    68.5% { background-color: #A8B3AB }
+    69.9% { background-color: #FFA7A5 }
+    71.3% { background-color: #2964EE }
+    72.%  { background-color: #789C20 }
+    74.%  { background-color: #F6F4F5 }
+    75.6% { background-color: #344620 }
+    77.0% { background-color: #6DA9B1 }
+    78.4% { background-color: #F5ED9C }
+    79.8% { background-color: #25E9FF }
+    81.2% { background-color: #74F72F }
+    82.6% { background-color: #FFFF2E }
+    84.0% { background-color: #00B01A }
+    85.4% { background-color: #000A0F }
+    86.8% { background-color: #0D1949 }
+    88.2% { background-color: #000219 }
+    89.6% { background-color: #0016A0 }
+    91.0% { background-color: #E04711 }
+    92.4% { background-color: #DCAA10 }
+    93.8% { background-color: #A45010 }
+    95.2% { background-color: #0D8020 }
+    96.6% { background-color: #AB65DC }
+    98.2% { background-color: #E0A88D }
+    100%  { background-color: #EB123E }
+}
+
+@media only screen and (max-width: 1100px) {
+	#main-content {
+		width: 100%;
+	}
+
+}
+
+/* was going to use gradient instead of solid color, but fade transitions don't work with gradients
+1.4% { background: linear-gradient(#21DE9C, #EB123E) }
+2.8% { background: linear-gradient(#296BB5, #E0A88D) }
+4.199999999999999% { background: linear-gradient(#000052, #AB65DC) }
+5.6% { background: linear-gradient(#D6F7FF, #0D8020) }
+7% { background: linear-gradient(#42A5D6, #A45010) }
+8.4% { background: linear-gradient(#0000FF, #DCAA10) }
+9.8% { background: linear-gradient(#00FF00, #E04711) }
+11.2% { background: linear-gradient(#FF0000, #0016A0) }
+12.6% { background: linear-gradient(#F7F7F7, #000219) }
+14.0% { background: linear-gradient(#848484, #0D1949) }
+15.4% { background: linear-gradient(#FF00FF, #000A0F) }
+16.% { background: linear-gradient(#A52963, #00B01A) }
+18.% { background: linear-gradient(#10FF8C, #FFFF2E) }
+19.5% { background: linear-gradient(#C67BCE, #74F72F) }
+20.9% { background: linear-gradient(#D67BFF, #25E9FF) }
+22.3% { background: linear-gradient(#10FF8C, #F5ED9C) }
+23.7% { background: linear-gradient(#EF8CDE, #6DA9B1) }
+25.1% { background: linear-gradient(#FF9452, #344620) }
+26.5% { background: linear-gradient(#4A9CCE, #F6F4F5) }
+27.9% { background: linear-gradient(#63F7F7, #789C20) }
+29.3% { background: linear-gradient(#ADBDD6, #2964EE) }
+30.7% { background: linear-gradient(#DEFACE, #FFA7A5) }
+32.1% { background: linear-gradient(#DABBED, #A8B3AB) }
+33.5% { background: linear-gradient(#BEEFED, #D15D9C) }
+34.9% { background: linear-gradient(#FACADE, #7FE5FC) }
+36.3% { background: linear-gradient(#DECADE, #45B5FF) }
+37.7% { background: linear-gradient(#94EFD6, #03329E) }
+39.1% { background: linear-gradient(#155FD9, #035ED0) }
+40.5% { background: linear-gradient(#6C0700, #008080) }
+41.9% { background: linear-gradient(#FF8170, #008080) }
+43.3% { background: linear-gradient(#FFCCC5, #5EA24B) }
+44.7% { background: linear-gradient(#E88833, #FA7123) }
+46.1% { background: linear-gradient(#EADB84, #4EA8FE) }
+47.5% { background: linear-gradient(#A6846A, #FFD737) }
+48.9% { background: linear-gradient(#FF7AFF, #5B799F) }
+50.3% { background: linear-gradient(#8AD1FB, #8AD1FB) }
+51.7% { background: linear-gradient(#5B799F, #FF7AFF) }
+53.1% { background: linear-gradient(#FFD737, #A6846A) }
+54.5% { background: linear-gradient(#4EA8FE, #EADB84) }
+55.9% { background: linear-gradient(#FA7123, #E88833) }
+57.3% { background: linear-gradient(#5EA24B, #FFCCC5) }
+58.7% { background: linear-gradient(#008080, #FF8170) }
+60.1% { background: linear-gradient(#008080, #6C0700) }
+61.5% { background: linear-gradient(#035ED0, #155FD9) }
+62.9% { background: linear-gradient(#03329E, #94EFD6) }
+64.3% { background: linear-gradient(#45B5FF, #DECADE) }
+65.7% { background: linear-gradient(#7FE5FC, #FACADE) }
+67.1% { background: linear-gradient(#D15D9C, #BEEFED) }
+68.5% { background: linear-gradient(#A8B3AB, #DABBED) }
+69.9% { background: linear-gradient(#FFA7A5, #DEFACE) }
+71.3% { background: linear-gradient(#2964EE, #ADBDD6) }
+72.% { background: linear-gradient(#789C20, #63F7F7) }
+74.% { background: linear-gradient(#F6F4F5, #4A9CCE) }
+75.6% { background: linear-gradient(#344620, #FF9452) }
+77.0% { background: linear-gradient(#6DA9B1, #EF8CDE) }
+78.4% { background: linear-gradient(#F5ED9C, #10FF8C) }
+79.8% { background: linear-gradient(#25E9FF, #D67BFF) }
+81.2% { background: linear-gradient(#74F72F, #C67BCE) }
+82.6% { background: linear-gradient(#FFFF2E, #10FF8C) }
+84.0% { background: linear-gradient(#00B01A, #A52963) }
+85.4% { background: linear-gradient(#000A0F, #FF00FF) }
+86.8% { background: linear-gradient(#0D1949, #848484) }
+88.2% { background: linear-gradient(#000219, #F7F7F7) }
+89.6% { background: linear-gradient(#0016A0, #FF0000) }
+91.0% { background: linear-gradient(#E04711, #00FF00) }
+92.4% { background: linear-gradient(#DCAA10, #0000FF) }
+93.8% { background: linear-gradient(#A45010, #42A5D6) }
+95.2% { background: linear-gradient(#0D8020, #D6F7FF) }
+96.6% { background: linear-gradient(#AB65DC, #000052) }
+98.0% { background: linear-gradient(#E0A88D, #296BB5) }
+99.4% { background: linear-gradient(#EB123E, #21DE9C) }
+
+generated using the generateAnimationPercents() function
+
+1.4
+2.8
+4.199999999999999
+5.6
+7
+8.4
+9.8
+11.2
+12.6
+14.0
+15.4
+16.
+18.
+19.5
+20.9
+22.3
+23.7
+25.1
+26.5
+27.9
+29.3
+30.7
+32.1
+33.5
+34.9
+36.3
+37.7
+39.1
+40.5
+41.9
+43.3
+44.7
+46.1
+47.5
+48.9
+50.3
+51.7
+53.1
+54.5
+55.9
+57.3
+58.7
+60.1
+61.5
+62.9
+64.3
+65.7
+67.1
+68.5
+69.9
+71.3
+72.
+74.
+75.6
+77.0
+78.4
+79.8
+81.2
+82.6
+84.0
+85.4
+86.8
+88.2
+89.6
+91.0
+92.4
+93.8
+95.2
+96.6
+98.0
+99.4
+100.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+

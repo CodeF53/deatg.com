@@ -1,0 +1,231 @@
+@font-face {
+	font-family: HindSiliguri-Regular;
+	src: url(resources/HindSiliguri-Regular.ttf);
+}
+
+body {
+    background-image: url("resources/Banner.jpg");
+    background-size: cover;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+img {
+    width: 190px;
+}
+
+h1 {
+    font-family: monospace;
+    color: black;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: monospace;
+    color: black;
+    font-size: 20px;
+}
+
+p {
+    font-family: monospace;
+    color: black;
+    font-size: 14px;
+}
+
+
+
+.nav {
+    overflow: visible;
+    background-color:rgb(0, 41, 82);
+    text-align: center;
+    position: relative;
+}
+  
+.nav a {
+    color: #f2f2f2;
+    text-align: center;
+    font-family: monospace;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0ms;
+}
+  
+.nav a:hover {
+    background-color: #ddd;
+    color: black;
+    font-size: 20px;
+    padding: 11px 13px;
+}
+  
+.nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#banner-image {
+    width: 100%;
+}
+
+#center-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5vw;
+    font-family: "HindSiliguri-Regular";
+    font-weight: bold;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black, rgb(34, 0, 66) 9px 9px 4px;
+  }
+
+#links {
+    background: rgba(255, 255, 255, 0.5);
+    background-blend-mode: multiply;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 40%;
+    
+    animation: color-change 30s infinite;
+    backdrop-filter: blur(2px);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+
+.dropdown-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown {
+    float: left;
+    position: absolute;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.nav a {
+    transition: none;
+}
+  
+.nav a:hover {
+    transform: none;
+    font-size: 17px;
+}
+
+#flex-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-links {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 250px;
+    width: 200px;
+    cursor: pointer;
+    padding: 30px;
+    margin: 5% 5%;
+    box-shadow: black 2px 2px 4px;
+    transition: box-shadow 0.3s;
+}
+
+.image-links img {
+    transition: transform 1s;
+}
+
+.image-links:nth-child(1) {
+    background: linear-gradient(to right, #6441a5, #2a0845);
+}
+.image-links:nth-child(2) {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+}
+.image-links:nth-child(3) {
+    background: linear-gradient(to right, #8e0e00, #1f1c18);
+}
+.image-links:nth-child(4) {
+    background: linear-gradient(to right, #00b86b, #0f3443);
+}
+
+.image-links p {
+    color: white;
+}
+.image-links h1 {
+    text-shadow:rgb(34, 0, 66) 5px 5px 3px;
+    font-size: 18px;
+    color: white;
+}
+
+.image-links:hover {
+    box-shadow: black 30px 30px 50px;
+}
+
+#doge-logo {
+    border: 3px solid rgb(39, 39, 39);
+    border-radius: 4px;
+    transform: skewY(4deg);
+}
+
+#doge-logo, #ar-logo {
+    box-shadow: 1px 1px 2px;
+    transition: box-shadow 1s, transform 1s;
+}
+
+.image-links:hover #doge-logo, .image-links:hover #ar-logo {
+    box-shadow: 9px 9px 12px;
+    transform: skewY(7deg);
+
+}
+
+.image-links:hover img {
+    transform: skewY(2deg);
+    
+}
+
+
+
+
+@keyframes color-change {
+    12.5%   { background: rgba(0, 183, 255, 0.5); }
+    25%     { background: rgba(55, 0, 255, 0.5); }
+    37.5%   { background: rgba(204, 0, 255, 0.5); }
+    50%     { background: rgba(255, 0, 170, 0.5); }
+    62.5%   { background: rgba(255, 145, 0, 0.5); }
+    75%     { background: rgba(251, 255, 0, 0.5); }
+    87.5%   { background: rgba(0, 255, 170, 0.5); }
+    100%    { background: rgba(0, 255, 255, 0.5); }
+}
+
+
+@media only screen and (max-width: 900px) {
+}

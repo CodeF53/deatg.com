@@ -1,0 +1,72 @@
+<!doctype HTML>
+<html lang="eon"> 
+    <head>
+        <title>ITEC 190 Final Project</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link href="index_style.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="resources/MainFavicon.png" />
+    </head>
+
+    <body>
+        <!--
+        <div class="dropdown">
+            <button class="dropdown-button">☰</button>
+            <div class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="web.html">Web Evolution</a>
+                <a href="variables.html">Variables</a>
+                <a href="methods.html">Methods</a>
+                <a href="conditionals.html">Conditionals</a>
+            </div>
+        </div>
+        -->
+        
+        <div id="banner">
+            <div id="center-text">ITEC 190 Final Project</div>
+        </div>
+        <div id="links">
+            <div id="flex-links">
+                <div class="image-links" onclick="WebClick()">
+                    <img src="resources/WebMonitorIcon.png">
+                    <h1>Evolution of the Web</h1>
+                    <p>A brief history of webpages on the internet.</p>
+                </div>
+                <div class="image-links" onclick="IoTClick()">
+                    <img src="resources/IoTLogo.png">
+                    <br><br>
+                    <h1>Internet of Things</h1>
+                    <p>A look at 3 popular internet-enhanced devices.</p>
+                </div>
+                <div class="image-links" onclick="DogecoinClick()">
+                    <img id="doge-logo" src="resources/DogecoinGold.jpg">
+                    <h1>Dogecoin</h1>
+                    <p>Some information about one of the most famous cryptocurrencies.</p>
+                </div>
+                <div class="image-links" onclick="ARClick()">
+                    <img id="ar-logo" src="resources/ARGlasses.png">
+                    <h1>Augmented Reality</h1>
+                    <p>How new AR technology can help with a variety of tasks.</p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    <script>
+        function WebClick() {
+            window.location.href="web.html";
+        }
+
+        function IoTClick() {
+            window.location.href="iot.html";
+        }
+
+        function DogecoinClick() {
+            window.location.href="dogecoin.html";
+        }
+
+        function ARClick() {
+            window.location.href="ar.html";
+        }
+    </script>
+</html>

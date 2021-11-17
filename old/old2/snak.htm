@@ -1,0 +1,62 @@
+<div id=snakediv style="position: absolute; top: 100px; left: 100px">
+<script language="javascript" type="text/javascript"><!--
+
+var dead = 0;
+var stopped = 1;
+var moving = 2;
+var item = 5;
+var time = 60;
+var goodSpot = 0;
+var hard = 0;
+var justStarted = 0;
+
+myAudio = new Audio('bgm.ogg');
+myAudio.loop = true;
+myAudio.play();
+
+function snake()
+{
+
+    var DirectionUp = 0;
+    var DirectionLeft = 1;
+    var DirectionRight = 2;
+    var DirectionDown = 3;
+
+    var objectWall = 99999;
+    var objectEmpty = 0;
+    var objectItem = -1;
+
+    this.imageEmpty = "<img src=old/toadface.png>";
+    this.imageSnake = "<img src=old/snake.png>";
+    this.imageWall = "<img src=old/wall.png>";
+    this.imageHead = "<img src=old/head.png>";
+    this.imageCherry = "<img src=old/cherry.png>";
+
+    this.itemP = 12;
+
+    this.fieldWidth = 30;
+    this.fieldHeight = 30;
+    this.length = 3;
+    this.newLength = 3;
+    this.direction = DirectionRight;
+    this.gameState = stopped;
+    this.gameField = InitGameField(this.fieldWidth, this.fieldHeight, this.length);
+    
+    function InitGameField(x, y, length)
+    {
+      var arr = new Array();
+      for (x1 = 0; x1 < x; x1++)
+      {
+        arr[x1] = new Array();
+        for(y1 = 0; y1 < y; y1++)
+        {
+            arr[x1][y1] = objectEmpty;
+        }
+
+      }
+
+      
+
+    }
+
+}

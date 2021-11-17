@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>klick</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="deatg">
+      <meta name="description" content="deatg website">
+      <meta property="og:title" content="webbtstie">
+      <meta property="og:description" content="deatg website">
+      <meta property="og:image" content="/some-image.png">
+      <meta property="og:url" content="/this-page.html">
+      <meta property="og:site_name" content="Your Site Name">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image:alt" content="image description">
+      <link href="click_style.css" rel="stylesheet">
+      <link rel="icon" type="image/svg+xml" href="old/png/example.png">
+    </head>
+    <body onload="setInterval(Update, 10); setInterval(ResetTimer, 1000);">
+        <div id="links">
+            <div id="flex-links">
+                
+            </div>  
+            <div id="other">
+                <div id="container">
+                    <img id="zone" src="resources/click-box.png"/><br>
+                    Clicks: <span id="clicks">0</span><br>
+                    Clicks per second: <span id="counter">0</span><br>
+                    Time elapsed: <span id="time">0</span><br>
+                </div>
+
+            </div>
+        </div>
+        <br><br><br><br>
+
+
+
+        <script>
+
+
+            function OnClick() {
+                
+            }
+
+            function ResetTimer() {
+                //clicks = 0;
+                //started = new Date();
+            }
+
+            function Update() {
+                counter.innerText = clicksPerSecond(started, clicks);
+            }
+
+            var started, resetTimeoutHandle, resetTimeout = 1000,
+                container = document.getElementById('container'),
+                counter = document.getElementById('counter'),
+                clickslabel = document.getElementById('clicks'),
+                zone = document.getElementById('zone'),
+                clicks = 0;
+
+            zone.onseclect = zone.onselectstart = function() {
+                return false;
+            };
+
+            function clicksPerSecond(started, clicks) {
+                var temp = clicks / ((new Date()) - started) * 1000;
+                temp = temp.toFixed(2);
+                return temp;
+            }
+
+            function count() {
+                clearTimeout(resetTimeoutHandle);
+                clicks++;
+                counter.innerText = clicksPerSecond(started, clicks);
+                clickslabel.innerText = clicks;
+                resetTimeoutHandle = setTimeout(reset, resetTimeout);
+                return false;
+            }
+
+            function start() {
+                started = new Date();
+                clicks = 0;
+                counter.style.opacity = 1;
+                this.onmousedown = count;
+                this.onmousedown();
+                return false;
+            }
+
+            function reset() {
+                zone.onmousedown = start;
+                clicks = 0;
+                counter.style.opacity = 0.3;
+            }
+
+            reset();
+        </script>
+    </body>
+
+
+</html>

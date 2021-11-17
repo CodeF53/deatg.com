@@ -1,0 +1,425 @@
+<div id=SNAKE_GAME_DIV style="position: absolute; top:100px; left: 100px">
+<script language="javascript" type="text/javascript"><!--
+
+
+
+// game states
+var snakeDead = 0;
+var snakeStopped = 1;
+var snakeRunning = 2;
+var cherries = 5;
+var timer = 60
+var goodSpot = 0;
+var hardMode = 0;
+var gameJustStarted = 1;
+var dummy = 0;
+
+myAudio = new Audio('bgm.ogg');
+myAudio.loop = true;
+myAudio.play();
+
+function Snake()
+{
+    // snake direction
+    var DirectionUp = 0;
+    var DirectionLeft = 1;
+    var DirectionRight = 2;
+    var DirectionDown = 3;
+    
+    // objects
+    var objectWall = 99999;
+    var objectEmpty = 0;
+    var objectCherry = -1;
+    
+    // images
+    this.imageEmpty = "<img src=png/e.png>";
+    this.imageSnake = "<img src=png/dsafresres.png>";
+    this.imageWall = "<img src=png/e.png>";
+    this.imageHead = "<img src=png/example.png>";
+    this.imageCherry = "<img src=png/o.png>";
+    
+    // cherry possibility => 1/this.cherryP per refresh
+    this.cherryP = 12;
+    // variables
+    this.fieldWidth = 30;
+    this.fieldHeight = 30;
+    this.length = 3;
+    this.newLength = 3;
+    this.direction = DirectionRight;
+    this.gameState = snakeStopped;
+    this.gameField = InitGameField( this.fieldWidth, this.fieldHeight, this.length );
+    function InitGameField( x, y, length )
+    {
+        // create field
+        var arr = new Array();
+        for( x1 = 0; x1 < x; x1++ )
+        {
+            arr[x1] = new Array();
+            for( y1 = 0; y1 < y; y1++ )
+            {
+                arr[x1][y1] = objectEmpty;
+            }
+        }
+        
+        // create borders
+        for( x1 = 0; x1 < x; x1 ++ )
+        {
+            arr[x1][0] = objectWall;
+            arr[x1][y - 1] = objectWall;
+        }
+        for( y1 = 0; y1 < y; y1 ++ )
+        {
+            arr[0][y1] = objectWall;
+            arr[x - 1][y1] = objectWall;
+        }
+
+        
+        // create snake
+        for( x1 = 0; x1 < length; x1++ )
+        {
+            arr[x1 + 1][1] = x1 + 1;
+        }
+        return( arr );
+    }
+    
+    this.Up = function()
+    {
+        this.direction = DirectionUp;
+    }
+    
+    this.Left = function()
+    {
+        this.direction = DirectionLeft;
+    }
+    
+    this.Right = function()
+    {
+        this.direction = DirectionRight;
+    }
+    
+    this.Down = function()
+    {
+        this.direction = DirectionDown;
+    }
+
+    this.ChangeImage = function( x, y, image1 )
+    {
+    try
+    {
+        var div_ = eval( "gf_" + x + "_" + y );
+        div_.innerHTML = image1;
+    }
+
+    catch(err)
+    {
+        snake1234.gameState = snakeDead;
+        dummy = 0;
+    }
+
+    }
+    
+    this.ChanceForNewCherry = function( )
+    {
+        var p = Math.floor( Math.random() * this.cherryP );
+        if( p == 0 )
+        {
+            var x = Math.floor( Math.random() * ( this.fieldWidth - 4 ) ) + 2;
+            var y = Math.floor( Math.random() * ( this.fieldHeight - 4 ) ) + 2;
+            
+            if( this.gameField[x][y] == 0 )
+            {
+                if( cherries < 3)
+                {
+                    this.gameField[x][y] = objectCherry;
+                    this.ChangeImage(x, y, this.imageCherry );
+                    cherries++;
+                }
+            }
+        }
+    }
+
+    // generate game html
+    this.WriteGameHtml = function ()
+    {
+        window.document.write( "<table border=0 cellspacing=0 cellpadding=0><tr><td colspan=30><font face=Arial size=2><div id=snake_info style='background-image: toadface.png; position: relative; top: 0px; left: 0px; text-align: center;'></div></font></td></tr>" );
+        for( i = 0; i < this.fieldHeight; i++ )
+        {
+            window.document.write( "<tr>" );
+            for( j = 0; j < this.fieldWidth; j++ )
+            {
+                switch( this.gameField[j][i] )
+                {
+                    case objectEmpty:
+                        window.document.write( "<td bgcolor=#f0f0f0><div id=gf_"+j+"_"+i+"><img src=toadface.png></div></td>" );
+                        break;
+                    case objectWall:
+                        window.document.write( "<td bgcolor=#f0f0f0><div id=gf_"+j+"_"+i+"><img src=wall.png></div></td>" );
+                        break;
+                    case objectCherry:
+                        window.document.write( "<td bgcolor=#f0f0f0><div id=gf_"+j+"_"+i+"><img src=cherry.png></div></td>" );
+                        break;
+                    default:
+                        if( this.gameField[j][i] == this.length )
+                        {
+                            window.document.write( "<td bgcolor=#f0f0f0><div id=gf_"+j+"_"+i+"><img src=head.png></div></td>" );
+                        }
+                        else
+                        {
+                            window.document.write( "<td bgcolor=#f0f0f0><div id=gf_"+j+"_"+i+"><img src=snake.png></div></td>" );
+                        }
+                        break;
+                }
+            }
+            window.document.write( "</tr>" );
+        }
+        window.document.write( "<tr><td colspan=30><font face=Arial size=1><div id=kpym style='position:relative; top: -23px; left: 13px;'><br><br><br><a style='text-decoration: none;' href='http://releasiotoadboard.freeforums.net/'>H</a><br><a style='text-decoration: none;' href='https://releasio.fandom.com/wiki/Releasio_Snakio/'>Source</a></div><div id=snake_length style='position:relative; top: -15px;'>length: 3</div></font><td></tr>" );
+        window.document.write( "</table>" );
+    }
+    
+    this.FullRefresh = function()
+    {
+        cherries = 0;
+        timer = 60
+        for( x = 1; x < this.fieldWidth - 1; x ++ )
+        {
+            for( y = 1; y < this.fieldHeight - 1; y++ )
+            {
+                if( this.gameField[x][y] == objectWall ) this.ChangeImage(x, y, this.imageWall );
+                else if( this.gameField[x][y] == 0 ) this.ChangeImage(x, y, this.imageEmpty );
+                else if( this.gameField[x][y] == this.length ) this.ChangeImage(x, y, this.imageHead );
+                else this.ChangeImage(x, y, this.imageSnake );
+            }
+        }
+    }
+    
+    // move snake and refresh game
+    this.GameRefresh = function()
+    {
+        if( this.gameState == snakeDead ) return;
+
+        var headPassed = false;
+
+        for( x = 1; x < this.fieldWidth - 1; x ++ )
+        {
+            for( y = 1; y < this.fieldHeight - 1; y++ )
+            {
+                if( this.gameField[x][y] == objectWall ) continue;
+                if( this.gameField[x][y] <= 0 ) continue;
+                if( headPassed && this.gameField[x][y] == this.length ) continue;
+
+                if( this.gameField[x][y] == this.length )
+                {
+                    // add new segment to the snake ( we only increase head number )
+                    if( this.length < this.newLength )
+                    {
+                        this.gameField[x][y] = this.newLength;
+                        this.length = this.newLength;
+                    }
+
+                    var x1 = x;
+                    var y1 = y;
+
+                    var randomModifier = Math.floor( Math.random() * 2 ) + 1;
+                    switch(this.direction)
+                    {
+                    case DirectionUp:
+                        //y1--;
+			y1 = y1 - randomModifier;
+                        break;
+                    case DirectionLeft:
+                        //x1--;
+			x1 = x1 - randomModifier;
+                        break;
+                    case DirectionRight:
+                        //x1++;
+			x1 = x1 + randomModifier;
+                        break;
+                    case DirectionDown:
+                        //y1++;
+			y1 = y1 + randomModifier;
+                        break;
+                    }
+                    try {
+                        if( this.gameField[x1][y1] > 0 )
+                        {
+                            this.gameState = snakeDead;
+                            return
+                        }
+                    }
+                    catch(err) {
+                        dummy = 0;
+                        snake1234.gameState = snakeDead;
+                    }
+
+                    try {
+
+                        if( this.gameField[x1][y1] == objectCherry )
+                        {
+                            this.newLength++;
+                            cherries--;
+                        
+                            goodSpot = 0;
+                       
+                            if (hardMode == 1)
+                            {
+ 
+                                this.gameField[x1][y1]--;
+                                this.ChangeImage(x1, y1, this.imageEmpty );
+
+                                while(goodSpot == 0)
+                                {
+                                    x1 = Math.floor( Math.random() * ( this.fieldHeight - 9 ) ) + 7;
+                                    y1 = Math.floor( Math.random() * ( this.fieldHeight - 9 ) ) + 7;
+                                    if (this.gameField[x1][y1] == objectEmpty)
+                                    {
+                                        goodSpot = 1;
+                                    }
+                                }
+                            }
+
+                            if( this.length > 4)
+                            {
+                                timer = 40
+                            }
+
+                            if( this.length > 8)
+                            {
+                                timer = 30
+                            }
+
+                            if( this.length > 20)
+                            {
+                                if (hardMode == 0) {
+                                    alert("You beat the game!! But can you do it in hard mode? 6e 6f 6f 62");
+                                }
+
+                                if (hardMode == 1) {
+                                    alert("You beat the game on hard mode! Cool! 6c 6f 6c 20 68 65 78");
+                                }
+
+                                snake1234.gameState = snakeDead;
+                            
+                            }
+
+                        }
+               
+                    }
+
+                    catch(err) {
+                        snake1234.gameState = snakeDead;
+                        dummy = 0;
+                    }
+                    try {
+                        this.gameField[x1][y1] = this.length;
+                        headPassed = true;
+                        // draw head
+                        this.ChangeImage(x1, y1, this.imageHead );
+                        // draw snake
+                        this.ChangeImage(x, y, this.imageSnake );
+                    }
+                    catch(err) {
+                        dummy = 0;
+                        snake1234.gameState = snakeDead;
+                    }
+                    
+                }
+                this.gameField[x][y]--;
+                // draw blank image if changed to empty
+                if( this.gameField[x][y] == 0 ) this.ChangeImage(x, y, this.imageEmpty );
+            }
+        }
+        
+        this.ChanceForNewCherry();
+        snake_length.innerHTML = "<br>Toad toad: " + this.length;
+    }
+    
+    this.StartStopPause = function()
+    {
+        switch( this.gameState )
+        {
+        case snakeStopped:
+            this.gameState = snakeRunning;
+            break;
+        case snakeRunning:
+            this.gameState = snakeStopped;
+            break;
+        case snakeDead:
+            snake_info.innerHTML = "";
+            this.length = 3;
+            this.newLength = 3;
+            this.direction = DirectionRight;
+            this.gameField = InitGameField( this.fieldWidth, this.fieldHeight, this.length );
+            this.FullRefresh();
+            this.gameState = snakeRunning;
+            break;
+        }
+    }
+}
+
+// start the game
+var snake1234 = new Snake();
+
+snake1234.WriteGameHtml();
+
+document.onkeydown = function (e)
+{
+    switch( window.event.keyCode )
+    {
+    case 37:
+        snake1234.Left();
+        break;
+    case 38:
+        snake1234.Up();
+        break;
+    case 39:
+        snake1234.Right();
+        break;
+    case 40:
+        snake1234.Down();
+        break;
+    case 32:
+        snake1234.StartStopPause();
+        gameJustStarted = 0;
+        break;
+    case 13:
+        if ( gameJustStarted == 1 )
+        {
+            hardMode = 1;
+        }
+        break;
+    }
+}
+
+function RefreshGame()
+{
+    if( snake1234.gameState == snakeDead )
+    {
+        snake_info.innerHTML = "RELEASIO SNAKIO V1.0<br><br><br><br><br><br><br><br><br><font color=red><b>AAAAAAAAAAA</b> <br> AAAAAAAAAAAAAAAAAAAAAAAA</font>"; 
+    }
+    else if( snake1234.gameState == snakeRunning )
+    {
+        snake_info.innerHTML = "RELEASIO SNAKIO V1.0<br><br><br><br><br><br><br><br><br><br>";
+        snake1234.GameRefresh();
+    }
+
+    else if( snake1234.gameState == snakeStopped )
+    {
+        if (gameJustStarted == 0)
+        {
+            snake_info.innerHTML = "RELEASIO SNAKIO V1.0<br><br><br><br><br><br><br><br><br>press spacebar<br>";
+        }
+        if (gameJustStarted == 1)
+        {
+            snake_info.innerHTML = "<br><br>Controls:<br>Arrow Keys: Go in that direction.<br>Press Space to start the game.<br>Press Space to pause or unpause the game.<br><br>To switch to hard mode, restart the page<br>and press enter before starting the game.<br><br><br>press spacebar<br>";
+        }
+    }
+    
+    
+
+    setTimeout( "RefreshGame();", timer );
+}
+
+RefreshGame();
+-->
+</script>
+</div>

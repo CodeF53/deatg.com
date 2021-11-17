@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>incremental game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>incremental gaem</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> who needs css-->
+    <link rel="shortcut icon" href="old/png/example.png" >
+    
+  </head>
+<body>
+
+<p>i think i'm going to update this soon, maybe even connect a database and make a leaderboard</p>
+<p> you have </p>
+<p id="amount">0</p>
+<button onclick="one()" id="increase">+1</button>
+<button onclick="pcOne()">increase per click by one, cost: 20</button>
+<button onclick="pc60()">increase per click by 60, cost:6000</button> 
+
+<script>
+  var game = {
+  x: 0,
+  pc: 1, //per click
+  ps: 0 // per second
+}
+
+function one() {
+  game.x += game.pc
+  document.getElementById("amount").innerHTML = game.x
+  document.getElementById("increase").innerHTML = "+" + game.pc 
+}
+
+function pcOne() {
+  if (game.x > 19) {
+    game.x -= 20;
+    game.pc += 1
+    document.getElementById("amount").innerHTML = game.x
+  document.getElementById("increase").innerHTML = "+" + game.pc
+  }
+}
+
+function pc60() {
+  if (game.x > 5999) {
+    game.x -= 6000;
+    game.pc += 60
+    document.getElementById("amount").innerHTML = game.x
+  document.getElementById("increase").innerHTML = "+" + game.pc
+  }
+}
+</script>
+
+</body>
+</html> 

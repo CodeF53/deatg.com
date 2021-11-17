@@ -1,0 +1,279 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>pain(t)</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="old/png/paint.png" >
+    
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=MN_ei_d7G-hspiRdS25w7ICdd1QbEPxM7f5HGsTWDerZ9Wc4EriFuironkWMHTBfF-HpTv8DoHu8t319OBNOBhRXQQpk7pjaYGRjxO3zl2U" charset="UTF-8"></script><style>
+      
+      canvas {
+        border:1px solid #d3d3d3;
+        background-color: #f1f1f1;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+      }
+
+      p {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body onload="playMus()" id="change">
+    <audio loop src="http://a.deatg.repl.co/audio/mario_paint.mp3"   autobuffer id="mario"></audio>
+    <audio loop src="http://a.deatg.repl.co/audio/Jonio Paint.mp3" id="jonio"></audio>
+
+    <button onclick="playMario()">BGM 1</button>
+    <button onclick="noBGM()">&#x1f507;</button>
+    <button onclick="resume()">&#128266;</button>
+
+  	<div id="paint">f
+  		<canvas id="myCanvas"></canvas>
+	</div>
+  
+
+  <p> window size (ADJUSTING CLEARS CANVAS): width:</p>
+  <button onclick="increaseWidth()">+</button>
+  <button onclick="decreaseWidth()">-</button> 
+  <p> height:</p>
+  <button onclick="increaseLength()">+</button>
+  <button onclick="decreaseLength()">-</button>
+  &nbsp; &nbsp &nbsp; <button onclick="makeBig()">click to make 1800x700</button><br>
+
+
+  <p> brush size:</p> &nbsp;
+  <button onclick="increaseSize()">+</button>
+  <p id="displaySize"></p>
+  <button onclick="decreaseSize()">-</button> <br><br>
+
+
+
+  <div class="colors">
+  <p> color </p>
+          <button type="button" value="#f00000" style="background-color: #f00000;">red</button>
+          <button type="button" value="#ff6600" style="background-color: #ff6600;">red 2</button>
+          <button type="button" value="#ff9933" style="background-color: #ff9933;">orange 3</button>
+          <button type="button" value="#ffcc00"  style="background-color: #ffcc00;">orange 2</button>
+          <button type="button" value="#ffcc66" style="background-color: #ffcc66;">orange</button>
+          <button type="button" value="#deb887" style="background-color: #deb887;">tan</button>
+          <button type="button" value="#f5deb3" style="background-color: #f5deb3;">skin color</button>
+          <button type="button" value="#ffff99" style="background-color: #ffff99;">yellow 2</button>
+          <button type="button" value="#ffff00" style="background-color: #ffff00;">yellow</button>
+          <button type="button" value="#99ff99" style="background-color: #99ff99;">light green</button>
+          <button type="button" value="#00ff00" style="background-color: #00ff00;">green</button>
+          <button type="button" value="#0000ff" style="background-color: #0000ff;">blue</button>
+          <button type="button" value="#009fff" style="background-color: #009fff;">light blue</button>
+          <button type="button" value="#0fffff" style="background-color: #0fffff;">ligher blue</button>
+          <button type="button" value="#bfffff" style="background-color: #bfffff;">lightest blue</button>
+          <button type="button" value="#ffffff" style="background-color: #ffffff;">white (erase)</button>
+          <button type="button" value="#e8c4e8" style="background-color: #e8c4e8;">pink 3</button>
+          <button type="button" value="#ff99ff" style="background-color: #ff99ff;">pink 2</button>
+          <button type="button" value="#ff66ff" style="background-color: #ff66ff;">pink</button>
+          <button type="button" value="#cc66cc" style="background-color: #cc66cc;">purrple 2</button>
+          <button type="button" value="#aa0fff" style="background-color: #aa0fff;">putple</button>
+          <button type="button" value="#999999" style="background-color: #999999;">light grey</button>
+          <button type="button" value="#666666" style="background-color: #666666;">grey</button>
+          <button type="button" value="#333333" style="background-color: #333333;">dark grey</button>
+          <button type="button" value="#000000" style="background-color: #000000;">haha you can't see this text!</button>
+          <button type="button" value="#003300" style="background-color: #003300;">dark green</button>
+          <button type="button" value="#555000" style="background-color: #555000;">green brown</button>
+          <button type="button" value="#cc6600" style="background-color: #cc6600;">other brown</button>
+          <button type="button" value="#330000" style="background-color: #330000;"> style="background-color: #330000;"red brown</button>
+          <button type="button" value="#663300" style="background-color: #663300;">brwon</button>
+          </div>
+          <button type="button" class="custom" id="custom2">custom color</button>
+  <br><br><BR><BR>
+  
+  <a id="download" download="WWWWWWWWWWWWWWWWWWWWWWWWWWW.png" href="" onclick="download_img(this);" style="border: 3px solid grey" style="background-color: light-grey" >download your masterpiece</a>
+  
+
+   
+  
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <button onclick="enableSecretTower()" style="opacity: 0.1;">click to enable super secret settings</button>
+
+    <script>
+      
+var canvas_width = 480;
+var canvas_height = 270;
+var line_width = 3;
+var color = "black";
+
+
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+var jonio = document.getElementById("jonio");
+var mario = document.getElementById("mario");
+ 
+var painting = document.getElementById('paint');
+var paint_style = getComputedStyle(painting);
+canvas.width = canvas_width;
+canvas.height = canvas_height;
+
+var mouse = {x: 0, y: 0};
+
+
+
+
+download_img = function(el) {
+  var image = canvas.toDataURL("image/png");
+  el.href = image;
+};
+
+
+
+function noBGM() {
+  mario.volume = 0;
+  jonio.volume = 0;
+}
+
+function resume() {
+  mario.volume = 0.001;
+}
+
+function playMus() {
+  jonio.volume = 0;
+  mario.volume = 0.001;
+  mario.play();
+  jonio.play();
+}
+
+
+
+function playMario() {
+  mario.volume = 0.001;
+  jonio.volume = 0;
+  mario.play();
+  jonio.play();
+}
+
+
+function enableSecretTower() {
+  mario.volume = 0;
+  jonio.volume = 0.001;
+  document.body.style.backgroundColor = "grey";
+}
+
+
+
+var colors = document.getElementsByClassName('colors')[0];
+
+  colors.addEventListener('click', function(event) {
+    ctx.strokeStyle = event.target.value || 'black';
+  });
+
+var customColor = document.getElementsByClassName('custom')[0];
+
+  customColor.addEventListener('click', function(event) {
+    var cuscolor = prompt('enter hex code for color (include #) or type color name'); 
+    ctx.strokeStyle = cuscolor || 'black';
+    
+  });
+
+
+function increaseSize() {
+  ctx.lineWidth += 2;
+  document.getElementById("displaySize").innerHTML = ctx.lineWidth;
+  
+}
+
+function decreaseSize() {
+  ctx.lineWidth -= 2;
+  document.getElementById("displaySize").innerHTML = ctx.lineWidth;
+}
+
+function increaseWidth() {
+  canvas.width += 50;
+}
+
+function decreaseWidth() {
+  canvas.width -= 50;
+}
+
+function increaseLength() {
+  canvas.height += 50;
+}
+
+function decreaseLength() {
+  canvas.height -= 50;
+}
+
+function makeBig() {
+  canvas.height = 700;
+  canvas.width = 1800;
+}
+ 
+canvas.addEventListener('mousemove', function(e) {
+  mouse.x = e.pageX - this.offsetLeft;
+  mouse.y = e.pageY - this.offsetTop;
+}, false);
+
+ctx.lineWidth = 4;
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.strokeStyle = color;
+
+canvas.addEventListener('touchmove', function(e) {
+  mouse.x = e.pageX - this.offsetLeft;
+  mouse.y = e.pageY - this.offsetTop;
+}, false);
+
+
+canvas.addEventListener('mousedown', function(e) {
+    ctx.beginPath();
+    ctx.moveTo(mouse.x, mouse.y);
+ 
+    canvas.addEventListener('mousemove', onPaint, false);
+}, false);
+
+canvas.addEventListener('touchstart', function(e) {
+    ctx.beginPath();
+    ctx.moveTo(mouse.x, mouse.y);
+ 
+    canvas.addEventListener('touchmove', onPaint, false);
+}, false);
+ 
+canvas.addEventListener('mouseup', function() {
+    canvas.removeEventListener('mousemove', onPaint, false);
+}, false);
+
+canvas.addEventListener('touchend', function() {
+    canvas.removeEventListener('touchmove', onPaint, false);
+}, false);
+ 
+var onPaint = function() {
+    ctx.lineTo(mouse.x, mouse.y);
+    ctx.stroke();
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>            

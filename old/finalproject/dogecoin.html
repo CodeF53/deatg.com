@@ -1,0 +1,112 @@
+<!--old internet style-->
+<!doctype HTML>
+<html lang="en"> 
+    <head>
+        <title>dogecoin.html</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link href="dogecoin_style.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="resources/DogeFavicon.png" />
+    </head>
+
+    <body onload="BeginDogeTeleport()">
+        <p id="doge-message">wow coin</p>
+         <div id="main-content">
+             <div id="navbar">
+                <a class="navbar" href="index.html">h0me</a>
+                <a class="navbar" href="web.html">Hstory of theweb</a>
+                <a class="navbar active" href="iot.html">Internet ㋼f things.</a>
+                <a class="navbar" href="dogecoin.html">...    DOGECOOIN '</a>
+                <a class="navbar" href="ar.html">Augmeanted Realty</a>
+             </div>
+             <div>
+                 <bR><Br>
+                 <img id="DogecoinLogo" src="resources/DogeCOin.PNG">
+                 <marquee direction="down" width="400" height="300" behavior="alternate">
+                    <marquee behavior="alternate">
+                      <img id="DogecoinGif" src="resources/DogecoinGif.gif">
+                    </marquee>
+                  </marquee><br>
+                 <marquee scrollamount="9" direction="down" height="100"><h1>Dogecoin</h1></marquee>
+                 <a href="https://dogecoin.com">https://dogecoin.com</a>
+                 <p>
+                     Dogecoin was created by IBM software engineer Billy Markus and Adobe software engineer Jackson Palmer in December of 2013. 
+                     Their goal was to create a digital currency that would appeal to a broader demographic than Bitcoin, as well as distance it 
+                     from the controversial history of other cryptocurrencies.
+                 </p>
+                 <marquee behavior="alternate" scrollamount="100" direction="left" width="100%" height="40"><img src="resources/DogeFavicon.png"></marquee>
+                 <p>
+                     Dogecoin features the Shiba Inu from the Doge meme. The cryptocurrency was started as joke / parody, but became very popular within a short amount of time.
+                     It became so popular that only less than a month after Dogecoin started, the project was hacked and 21 million dogecoins were stolen, which amounted to around $12,000.<br>
+                     A few months later in May of 2014, Dogecoin was infiltrated again and 280 million coins valued at $55,000 was stolen. The hacker even had access to every user's account
+                     information, so they could have also obtained users' credit card information.
+                 </p>
+                 <marquee behavior="alternate" scrollamount="100" direction="right" width="100%" height="40"><img src="resources/DogeFavicon.png"></marquee>
+                 <p>
+                     Dogecoin has a large online community. It appeals to more people and catches people's attention. <br>
+                     The Dogecoin project is written with C++. It has an API which allows users to programatically get information such as the current block number and difficulty,
+                     the balance in an address, or the amount received / given to a certain address.
+                 </p>
+                 <marquee behavior="alternate" scrollamount="100" direction="left" width="100%" height="40"><img src="resources/DogeFavicon.png"></marquee>
+                 <p>
+                     I think Dogecoin will be around for quite some time. It might not last as long as other currencies like Bitcoin or Etheruem, but I think it has a wide enough appeal 
+                     and community that it will be around for quite some time.
+                 </p>
+                 <marquee behavior="alternate" scrollamount="100" direction="right" width="100%" height="40"><img src="resources/DogeFavicon.png"></marquee>
+                 <p>
+                    Lorem ipsum dolor sit amet, prima utinam oporteat pri at, per probo eligendi ad. Duo partem scaevola
+                    at, cu erroribus accusamus principes mel. Laudem semper voluptatibus ea eos, id vel utinam platonem
+                    abhorreant. Per persius atomorum an, mea ferri harum voluptaria ex. Vix ad natum sonet probatus, at
+                    sea rebum viderer euismod.
+                </p>
+                 <marquee scrollamount="100" direction="down" width="100%" height="3000" behavior="alternate">
+                    <marquee behavior="alternate" scrollamount="100">
+                      <img src="resources/DogeFavicon.png">
+                    </marquee>
+                </marquee>
+             </div>
+            
+            <br>
+         </div>
+    </body>
+
+    <script>
+        //ignore this
+        var ioearjierjeaoprekr02324ijarpeajrarj2 = 1.4;
+        function generateAnimationPercents() {
+            console.log(ioearjierjeaoprekr02324ijarpeajrarj2)
+            ioearjierjeaoprekr02324ijarpeajrarj2 += 1.4;
+        }
+
+        function Next(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        var firstWord = ["wow ", "so ", "such ", "very ", "much ", "many ", "pls ", "wow ", "wow "];
+        var secondWord = [" ", " ", "image ", "site ", "ITEC 190", "doge ", "coin ", "ip address ", "hacking ", "mine ", "mining ", "bitcoin ", "dogecoin ", "a ", "javascript ", 
+                            "html ", "css ", "c++ ", "paragraph ", "script ", "function ", "website ", "dog ", "div ", "navbar ", "veiwport ", "marquee", "ok ", "wow ", "wow", 
+                            "computer", "technology", "time", "random ", "funny ", "lol ", "internet ", "programming ", "web development ", "stylesheets ", "id ", 
+                            "class ", "image ", "cryptocurrency ", "coin ", "rich ", "blockchain ", "gaming ", "memes ", "not php", "colors ", "words ", "element "];
+
+        function DogeTeleport() {
+            var theText = document.getElementById("doge-message");
+
+            theText.innerHTML = firstWord[Math.floor(Math.random() * firstWord.length)] + secondWord[Math.floor(Math.random() * secondWord.length)];
+            theText.style.color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            theText.style.fontSize = `${Next(50, 80)}px`;
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            theText.style.left = `${Next(0, w - 300)}px`;
+            theText.style.top = `${Next(0, h)}px`;
+        }
+
+        function BeginDogeTeleport() {
+            setInterval(function() {
+                DogeTeleport();
+            }, 3000);
+        }
+
+
+
+    </script>
+</html> 

@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(95deg, rgb(189, 193, 196), rgb(164, 165, 165));
+}
+
+.grid {
+  border: 0px rgb(181, 187, 192) solid;
+  width: 1340px;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.085fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap:10px;
+  grid-row-gap: 1px;
+  
+}
+
+.box {
+  font-size: 12px;
+  color: black;
+  border-radius: 5px;
+  border: 2px rgb(40, 100, 128) solid;
+}

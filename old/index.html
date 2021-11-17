@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>webbtstie</title>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="_CfXZPNsYzoIe05xB2AFv3flzOS1M0KQ1i_Uropw6qQ" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="deatg">
+    <meta name="keywords" content="deatg, deatg5, demfex, deatg#4721, detg, daetg, detag">
+    <meta name="author" content="deatg">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="shortcut icon" href="png/example.png" >
+    
+    
+    
+  
+  </head>
+  
+  
+  
+  <body onload="websiteLoad()" style="background-size: cover;">
+    <script src="script.js"></script>
+
+
+    
+    
+    <div onload="splash()" class="topnav">
+      <img src="https://anlucas.neocities.org/42.gif" width="32px" height="32px"/>
+      <a onclick="shuffle()" type="button" >&#128256;</a>
+      <a onclick="play()" type="button" >	&#9654;</a>
+      <a onclick="pause()" type="button" >&#9208;</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p style="display: inline; color: white; font-size: 12px">bg colors: </p>
+      <p id="color1" style="display: inline; color: white; font-size: 11px">#000000</p>
+      <p id="color2" style="display: inline; color: white; font-size: 11px">#000000</p>
+      &nbsp;&nbsp;&nbsp;
+      
+      <a onclick="pauseBG()" type="button" >pause</a>
+      <a onclick="startBGLoop()" type="button" >resume</a>
+      <a onclick="setbg()" type="button" >random bg image</a>
+      <p style="display: inline; color: white;">choose bg image:</p>
+      <img onclick="chooseBG('bup')" src="icons/bup.png" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('bliss')" src="icons/bliss_icon.jpg" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('garf')" src="icons/garf_icon.PNG" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('mega_man')" src="icons/mega_man_icon.png" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('re_zero')" src="icons/re_zero_icon.jpg" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('space')" src="icons/space_bliss_icon.PNG" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('wdw')" src="icons/wdw_icon.png" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('windows')" src="icons/windows_icon.png" width="32px" height="32px" style="display: inline;">
+      <img onclick="chooseBG('marble')" src="https://anlucas.neocities.org/tealmarble.gif" width="32px" height="32px" style="display: inline;">
+      <a href="https://www.youtube.com/channel/UCvuj4D5mQKEG9edyw5OEloA?view_as=subscriber" style="float: right;">youtube channel</a>
+      
+      
+
+
+
+    </div>
+    
+    <p id="showSong" onload="websiteLoad();"></p>
+
+    
+      <br>
+      <h1 onclick="delet_this();" id="title">webbtstie</h1>
+      <p id="motd">Message of the day: (loading)</p> <p id="splash"></p>
+      <br><br>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <div class="BOXCS window " >
+        <div class="title-bar" >
+          <div class="title-bar-text">Features</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body not-taskbar">
+          <p>there is...</p>
+          <form action="../paint.html"> <button type="submit">Paint</button> </form>
+          <form action="../randomgame.html" style="float: right;"> <button type="submit">Game Generator</button> </form><br>
+          <form action="../game1.html"> <button type="submit">Incremental Game</button> </form>
+          <form action="../game2.html" style="float: right;"> <button type="submit">game 2</button> </form><br>
+          <form action="secret.html"> <button type="submit">enter key</button> </form>
+          <form action="old2/index.html" style="float: right;"> <button type="submit">old website</button> </form><br>
+          <form action="guestbook/gbook.php"> <button type="submit">Guest Book</button> <img src="png/book.png" > </form>
+          <form action="https://a--deatg.repl.co" style="float: right;"> <button type="submit">Second Site</button> </form><br>
+          <form action="../graph.html" > <button type="submit">graph</button> </form>
+          <form action="unity/index.html" style="float: right;"> <button type="submit">Unity 3D Game</button> </form><br>
+          <!-- <form action="demfex/index.php" > <button type="submit">Demfex</button> </form> -->
+          <form action="sounds.html"> <button type="submit" style="opacity: 0" >Sounds</button> </form>
+        </div>
+      </div>
+
+
+      <div class="BOXCS_2 window " >
+        <div class="title-bar">
+          <div class="title-bar-text">Creations</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body not-taskbar">
+          <p>things</p>
+          <form action="../romhack.html"> <button class="buttton" type="submit">Super Yeezus 64</button> </form>
+          <form action="bup.html"> <button class="buttton" type="submit">Releasio Minecraft</button> </form>
+          <form action="../bot.html"> <button class="buttton" type="submit">Discord Bot</button> </form>
+        </div>
+      </div>
+
+      
+
+
+      <div class="BOXCS_3 window" >
+        <div class="title-bar">
+          <div class="title-bar-text">Videos</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body not-taskbar">
+          <a onclick="pranked();"> COMING SOON </a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="BOXCS_NEWS window" >
+        <div class="title-bar">
+          <div class="title-bar-text">News</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+
+
+
+        <div class="window-body not-taskbar">
+          <p class="cool_font">News</p>
+
+          <div class="post">
+            <h3>Important news update</h3>
+            <h4>April 9, 2021</h4>
+            <hr>
+            <p>there is still no news</p>
+            <br><br><br>
+          </div>
+
+          <div class="post">
+            <h3>Important news update</h3>
+            <h4>March 1, 2021</h4>
+            <hr>
+            <p>there is no news (yet)</p>
+            <br><br><br>
+          </div>
+
+          <br><br><br>
+
+
+
+        </div>
+      </div>
+
+      
+      &nbsp;&nbsp;
+      <div id="invis" style="opacity: 0;">
+      <a class="active" href="#home">home</a>
+      <a href="../game1.html">game 1</a>
+      <a href="../game2.html">game 2</a>
+      <a href="../paint.html">paint tool</a>
+      <a href="#contact">???</a>
+      <a href="#about">about</a>
+      <a href="../randomgame.html">Random Game Generator</a>
+      <a href="old2/index.html">previous site</a>
+      <a href="secret.html">enter key</a>
+      <a href="sounds.html">sounds</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br><p>a</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>va</p>
+      <p>v</p><br><br>
+      <p>(more coming soon)</p>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+            <div class="gcse-search" style="border: 1px solid blue;">
+              <script async src="https://cse.google.com/cse.js?cx=009953696023423910754:xqbqq4mjskr"></script> -->
+            </div>
+
+      <br><br><BR><BR><BR>
+        <p>a</p>
+
+      <div class="taskbar window">
+        <div class="window-body taskbar-items">
+          <button><img src="icons/start2.png"></button>
+          <button><img src="icons/features.png"></button>
+          <button><img src="icons/creations.png"></button>
+          <button><img src="icons/videos.png"></button>
+          <button><img src="icons/news.png"></button>
+          <button id="time" style="float: right; padding: 0px; height: 16px; margin: 0px;"><span>11:37</span></button>
+          <img style="float: right;" src="icons/separater2.png">
+        </div>
+      </div>
+
+      
+  <!--i should move these to deatg.com-->
+<audio id="1"> <source src="http://a.deatg.repl.co/audio/bgm.ogg" > </audio>
+<audio id="2"> <source src="http://a.deatg.repl.co/audio/nice_sprites.mp3"> </audio>
+<audio id="3"> <source src="http://a.deatg.repl.co/audio/e.mp3"   > </audio>
+<audio id="4"> <source src="http://a.deatg.repl.co/audio/mario_paint.mp3"> </audio>
+<audio id="5"> <source src="http://a.deatg.repl.co/audio/cena.mp3"> </audio>
+<audio id="6"> <source src="http://a.deatg.repl.co/audio/all_star.mp3"> </audio>
+<audio id="7"> <source src="http://a.deatg.repl.co/audio/whisper.mp3"> </audio>
+<audio id="8"> <source src="http://a.deatg.repl.co/audio/DK Rap.mp3"> </audio>
+<audio id="9"> <source src="http://a.deatg.repl.co/audio/megalovania.mp3"> </audio>
+<audio id="10"> <source src="http://a.deatg.repl.co/audio/maked_html.mp3"> </audio>
+<audio id="11"> <source src="http://a.deatg.repl.co/audio/hotel_mario.mp3"> </audio>
+
+
+<!-- THIS CODE SUCKS I SHOULD JUST REWRITE IT ALL but it works so that's fine i guess-->
+<script>
+
+
+var titles = ["deadtg webbtstie", "site of deatg", "deatg", "webbtstie", "deatg website", "deatgのウエブサイト", "deatg site"]
+
+var splashes = ["a", "???",  "test", "haha", "www", "question mark", "unfriending", 
+            "why rAndom people sign ined \n aaaaaaaaaaaaaaaaaaaaaa", "yay Your IP Hacking", "Why Apple Store7542 password hackinged", "cool and good", "@everyone", 
+            "Who can Use BUP? (By Decree of SimpleFlips) \n Joel (Vinesauce) \n Markass \n Loohoo \n Markass \n Cassie (Half of a BUP per week.) \n Anyone that rents it ($5 per month)", 
+            "stonks", "epic", "nice", "cool","wow","aaaaaaaaa", "minecarft", "Those skinny supercomputers confer.", "ip hackmakenow", "OOF UPLOADED","Made?", "Cloud is 6.6GB COMPLETED",
+              "what is going on", "ok", "ok defeat time", "Not linear!", "YOU BARELY HACK MARIO", "I'm using tilt controls!","時日月♡", "unfort", "UNBLOBK","Other lang add and Google play apk upload pls",":handshake:Deal",
+            "Sticks and stones may break my bones, but words are merely the smallest element of language capable of containing meaning in isolation and as such can never directly produce the four thousand Newtons force per square centimeter required to break bones.", 
+            "That's like calling your peanut butter sandwich a not fast airplane.", "Hey, Vsauce! Micheal here.", "And as always, thanks for watching.", 
+            "Note If the internal function raises an error that can be handled before finishing then it will retry until it succeeds.", "U must copy and paste the ones from Unicode. Thingy", 
+            "things cannot stay cool and good forever", "reason : banned servers", "pls link", "you ip hacking web", "thog dont caare", "i mostly played the wii u version", "review = 5.0", 
+            "@Deleted User", "Apple Store7542荒らしだよ", "ok", "good?", "Fixed an issue that could cause Command Blocks to stop working unexpectedly", "End of Announcement", "coming soon", 
+            "That is art", "yay", "hi", "@deatg#4721", "cmfxmdjxgjhxvyxbwererewt45l43532", "Stage Select - Mega Man 3", "How do u make a account on Xbox live", 
+            "It’s Luigi’s rotation party, and you are not invited.", "Kup teraz!", "if I stop, how can I find an octagon?", "dmfx=荒らしってイメージしかない", "Lol DMFX 642 face",
+            "I have the world record on Bowser's Big Bean Burrito", "I hope no one looks at my plans while I'm sleeping.", "You need to wait before using the hero ability again!", 
+            "What's the deal with airline food?", "I'm a tire!", "to upload your photos and videos, visit upload.theweathernetwork.com", "GEX", "maybe it's the way you're dressed?", 
+            "You gotta do what?", "the pizza is aggressive", "why image delete", "Bill directs the 1812 overture.", "actually the crowbar snaps in two.", "Chateau Bowser", "nice >:]", 
+            "@deatg5 神", "this website is bad. im leaving forever", "no worthier easy", "WELCOME TO NINTENDO HOMEPAGE", "THEDRANK.COM", "POWERFUL WARIO GAME 2004", "the correct answer is…", 
+            "TXT: \"Donkey Kong guarding his treasure ches\"", "TEXTUAL INTEGRITY FAILURE DETECTED", "WARNING: SYNAX INEGRATION ERROR", "CANNO COMPLEE REQUES", "BUP", "luk a hat", "Stonks", 
+            "WELCOME TO THE WARP ZONE", "Welcome to die!", "Dabbing is rated E for everyone!", "Footballers are used to striking - thrown on an Alien is a nice sight", 
+            "X Brian Robot    ✓ Steven Velociraptor", "Best By 07 SEP 18 043 / 49", "100 perCENT SOUP", "Be careful around the fabric of reality, Garfield.", "Fidget Spinner installed✓", 
+            "AND MONSTER ARE NOTHARMONIUS", "I like da bonemeal", "[Gnaffs]", "Not linear!", "W E T S P I D E R = OCTOPOOS", "ok give way Minecraft java", " H O L Y   C A N N O L L I",
+            "I Have A Dire Need", "Mohawk Valley Brand Limburger Cheese Spread", "And that, my friends, is commercial mathematics.", "nice >:]", "Time To Shake Youre Tail Like This Funny Cat Doe",
+            ">>75481902    Sad", "quiz: error cannot start computer", "<helpers.converters.Pokemon object at 0x7f197a25c370>", "ak6n rsw;'a;e]1;''BAia7§4š“èÝÑo¼", 
+             "nice", "ok", "wow yes", "epic", "cool", "Minecraft Card Game?", "spong", "I.R.O.N.I.C.", "What do you think of EEK?", 
+            "Just heat and serve!", "RENT PAID", "Perhaps", "Can you find the paper clip?", "HOW DO I SHOT WEB", "What, you egg? [stabs him]", "It's Joke", "that was GOODE", 
+            "Special amiibo card included!", "New Funky Mode!", "Featuring Dante from the Devil May Cry Series", "The Game!", "The Movie!", "esophagus", "Unregistered Hypercam 2", 
+            "SUPER BROS. 5", "NOT FINLAND", "pneumonoultramicroscophicsilicavolcanoconiosis", "eef freef", "CUT BOAT", "*banjo stops*", "sherk", 
+            "notification regarding pre hosted conquests", "BONE BLOCK", "moose no toady", "SOUP III", "Deluxe!", "Melee", "Brawl", "Collector's Edition", "Ultimate Edition", 
+            "Licensed by Nintendo", "pick youre fighter", "Jojo reference", "It's been one of those days.", "victory is yours", "Time remaining: 9e+301", "time remaining: 300", 
+            "time remaining: 1", "tenor.gif", "SANS WAS IN THE YEARBOOK", "\"Yes.\"", "Parabola Earth", "The Luigi Archives", "Importing…", "achievement unlocked", "to recap:", 
+            "Toad in a Boat", "'string'", "BOB ESPONJA", "OVER THE OCEAN", "HE COMES", "what did you eat for dinner on 5/14?", "Now entering A: sans", "Do you know where you are?", 
+            "Not a virus!", "20 ways to kill Mario just kidding 10 ways to kill mario", "how to get pokeflute in soul silver", "Where's the juice?", 
+            "You can now play as Luigi.", "In a can!", "For Nintendo 3DS", "OH YEAH MR. KRABS", "If you find toad, email me and i'll give you a secret prize", 
+            "The computer is destroyed.", "email gun", "make away the words", "Win Mario's ultimate beach party!", "DRINK!", "The Sand: it is too sand", "it's a goddamn wonder bread!", 
+            "God is not a fidget spinner", "I forgot the MILK¡", "Super Video CD", "Modulate all eggs?", "Welcome to the New Simple Volume Wizard", "You need a Toad to open this Toad!", 
+            "hey have you guys wver played super mario what an awesome game", "we are dead for sure", "NOT TODAY", "Where’d my wood go?", "Cereal when no milk", 
+            "Lamp oil, rope, bombs? You want it? It’s yours my friend. As long as you have enough Rupees.", "I wonder what’s for dinner…", "DINNER BLASTER", "Only 1 percent can pass 5 stage!", 
+            "bgm01", "calm4.ogg", "creative7.ogg", "sans", "[please pretend this is the BASS TRACK]", 
+            "Please make house.", "door touch to bbbbbbbbb......", "Is it really over?", "Get out.", "Next question.", "Z's", "I do not control the speed at which lobsters die.", "How did this happen?", "How did we get here?",
+            "Holy CG, look at the time.", "TREE WENT CRUNCH", "I'm really feeling it!", "That's not a fair question.", "Thank you for purchasing bot of deatg!", "house made",
+            "aaaaaaaaaaaaaaaaaaaaaaaa", "NO bad wards", "yay deatg5 house found",  "Unable to connect to world", "Coming soon", 
+            "Coming soon to own on DVD and Video", "YOU ARE THE PRINCE OF TENNIS", "bot of deatg 2: Electric Boogaloo", "bot of deatg 3: the Pre-Sequel", "bot of deatg 4: the Return",
+            "My work here is done.", "EXTREME DESERT BUS", "NEVER ORDER SPOOKY SPAGHETTI", "WAIT A MINUTE", "Here it is: My special attack.", "Oh man!", "Ultimate Battle", 
+            "Did you see that?", "🄱ANOS", "Deleting website...", "<Demfex> eon escalator", 
+            "A wild pokémon has appeared! Guess the pokémon and type ccatch <pokémon> to catch it!", "あああああああああああああああああああああああああああああああああああ",
+            "If this site ain't good enough, i'll erase it.", "It will be here for some additional time.", "Finally! A game system for me!", "Actually the crowbar snaps in two.",
+            "Just kidding!", "I honestly could not understand what you said just now.", "Who wants a bot of deatg at 3 in the morning?", "This is really unfunny. Please remove this bot from the server.",
+            "If i had a dollar for every time someone visited my website, i'd have like, 8 dollars.", "(Snow Halation plays)", 
+            "It is time to play Calculator", "草", 
+            "I'm in space!", "ALL YOUR BASE ARE BELONG TO US", "\"DEATG.COM\" POSSESES GREAT RISKS AS WELL AS GREAT POSSIBILITIES.",
+            "I need the hydrocarbons i'm looking for.", "CRC stands for Creamy Rigatoni Carbonara.", 
+            "You fool. You blongus. You absolute utter clampongus.","Am I glad he's frozen in there and that we're out here.",
+            "Not a virus!","ALMOND ACTIVATED","Toad very excited (with his legs showing)", "Definitely no hacking here",
+            "This message is already nothing but a memory.","Special amiibo card included!",
+            "\"bot of deatg will not be in smash because he would be too OP.\"","The entire Mega Man 3 soundtrack is a Jojo reference", "Not linear!",
+            "$19 deatg.com gift card. And yes, I'm giving it away.", "ARMY SAYS HAS DISC", "I;m thinking about thos Beans", "Pls make bot of deatg",
+            "Sorry has support ended Demfex Music", "Url click to auto Authentication", "Demfex tablet = Great", "VPN Valut:\n-super\n-proxy\n-old mobile hack mode lol",
+            "eon angry and killed", "DYUERS COLOURES", "Double sun power!", "Beauty itself... I've seen it.", "Your account has been disabled."]
+
+var len = 11
+var x = ran(1, len);
+var myMusic = document.getElementById(x);
+
+var shouldLoop = 0;
+
+
+
+
+var backgrounds = ["url(wallpaper/amazing.PNG)", "url(wallpaper/bliss.jpg)", "url(wallpaper/blue.png)", "url(wallpaper/bob_reunion.jpg)", "url(wallpaper/cordell is jadenm iahjnewunbnwnd.png)", "url(wallpaper/ENGLdSH.png)", "url(wallpaper/garf.PNG)", "url(wallpaper/hpuse.PNG)", "url(wallpaper/man_of_wood.png)", "url(wallpaper/mega_man.png)", "url(wallpaper/ocean_man.png)", "url(wallpaper/re_zero.jpg)", "url(wallpaper/space_bliss.PNG)", "url(wallpaper/wdw_hearts_2.1_reborn_the_story_untold.png)", "url(wallpaper/windows.png)"]
+
+var bgcolors = ["#21DE9C", "#296BB5", "#000052", "#D6F7FF", "#42A5D6", "#0000FF", "#00FF00", "#FF0000", "#F7F7F7", "#848484", "#FF00FF", "#A52963", "#10FF8C", "#C67BCE", "#D67BFF", "#10FF8C", "#EF8CDE", "#FF9452", "#4A9CCE", "#63F7F7", "#ADBDD6", "#DEFACE", "#DABBED", "#BEEFED", "#FACADE", "#DECADE", "#94EFD6", "#155FD9", "#6C0700", "#FF8170", "#FFCCC5", "#E88833", "#EADB84", "#A6846A", "#FF7AFF", "#8AD1FB", "#5B799F", "#FFD737", "#4EA8FE", "#FA7123", "#5EA24B", "#008080", "#008080", "#035ED0", "#03329E", "#45B5FF", "#7FE5FC", "#D15D9C", "#A8B3AB", "#FFA7A5", "#2964EE", "#789C20", "#F6F4F5", "#344620", "#6DA9B1", "#F5ED9C", "#25E9FF", "#74F72F", "#FFFF2E", "#00B01A", "#000A0F", "#0D1949", "#000219", "#0016A0", "#E04711", "#DCAA10", "#A45010", "#0D8020", "#AB65DC", "#E0A88D", "#EB123E"]
+
+function websiteLoad() {
+  document.getElementById("splash").innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
+  document.getElementById("motd").innerHTML = "Message of the day:";
+  startTime();
+  startBGLoop();
+}
+
+
+function pranked() {
+  document.getElementById("title").innerHTML = "coming soon";
+}
+
+function bgColorLoop() {
+
+  var ranbgcolor = bgcolors[Math.floor(Math.random() * bgcolors.length)];
+  var ranbgcolor2 = bgcolors[Math.floor(Math.random() * bgcolors.length)];
+  document.body.style.backgroundImage = "linear-gradient(" + ranbgcolor + ", " + ranbgcolor2 + ")";
+  
+  console.log(ranbgcolor);
+  console.log(ranbgcolor2);
+
+  document.getElementById("color1").innerHTML = ranbgcolor;
+  document.getElementById("color2").innerHTML = ranbgcolor2;
+
+  document.body.style.transition = "all 2s";
+
+  if(continueLoop) {
+    setTimeout(bgColorLoop, 4000);
+    document.getElementById("title").innerHTML = titles[Math.floor(Math.random() * (titles.length + 1))];
+  }
+}
+
+function startBGLoop() {
+    continueLoop = true;
+    bgColorLoop();
+}
+
+async function pauseBG() {
+    continueLoop = false;
+
+    color1 = document.getElementById("color1").innerHTML
+    color2 = document.getElementById("color2").innerHTML
+
+    console.log("color1 saved as " + color1 + ", color2 saved as " + color2);
+
+    //there has to be a better way to do this
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+    await sleep(500);
+    document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ")";
+
+    
+
+    
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+async function setbg() {
+  continueLoop = false;
+
+  var ranBG = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+  await sleep(1000);
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+  await sleep(1000);
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+  await sleep(1000);
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+  await sleep(1000);
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+  await sleep(1000);
+  document.body.style.backgroundImage = ranBG;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  console.log(ranBG);
+
+  
+}
+
+
+
+
+async function chooseBG(image) {
+  continueLoop = false;
+
+  document.body.style.backgroundImage = "wallpaper/amazing.PNG";
+  console.log("waht)");
+
+  switch (image)  {
+      case "bup":
+       document.body.style.backgroundImage = "url('icons/bup.png')";
+       document.body.style.backgroundSize = "auto";
+       break;
+      case "bliss":
+       document.body.style.backgroundImage = "url('wallpaper/bliss.jpg')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "garf":
+       document.body.style.backgroundImage = "url('wallpaper/garf.PNG')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "mega_man":
+       document.body.style.backgroundImage = "url('wallpaper/mega_man.png')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "re_zero":
+       document.body.style.backgroundImage = "url('wallpaper/re_zero.jpg')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "space":
+       document.body.style.backgroundImage = "url('wallpaper/space_bliss.PNG')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "wdw":
+       document.body.style.backgroundImage = "url('wallpaper/wdw_hearts_2.1_reborn_the_story_untold.png')";
+       document.body.style.backgroundSize = "cover";
+       break;
+      case "windows":
+       document.body.style.backgroundImage = "url('wallpaper/windows.png')";
+       document.body.style.backgroundSize = "auto";
+       break;
+      case "marble":
+       document.body.style.backgroundImage = "url('https://anlucas.neocities.org/tealmarble.gif')";
+       document.body.style.backgroundSize = "auto";
+       break;
+  }
+  
+}
+
+
+
+function ran(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function shuffle() {
+  myMusic.pause();
+  var x = ran(1, len);
+  myMusic = document.getElementById(x);
+  myMusic.play();
+  myMusic.volume = 0.3;
+  document.getElementById("showSong").innerHTML = toString(myMusic);
+}
+
+function play() {
+  document.getElementById("showSong").innerHTML = myMusic.src;
+  myMusic.play();
+  myMusic.volume = 0.3;
+}
+
+function pause() {
+  myMusic.pause();
+}
+
+function delet_this() {
+  document.getElementById("title").style.opacity = "0.0";
+  document.getElementById("invis").style.opacity = "1.0";
+}
+
+
+//FROM https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =
+  h + ":" + m ;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+// FROM https://www.w3schools.com/howto/howto_js_draggable.asp
+dragElement(document.getElementById("BOXCS"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+</script>
+  </body>
+</html>

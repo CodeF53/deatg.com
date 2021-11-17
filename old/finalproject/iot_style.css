@@ -1,0 +1,55 @@
+body {
+	background: linear-gradient(#e66465, #9198e5);
+	margin: 0px;
+}
+
+#navbar a {
+	color: rgb(61, 194, 255);
+	text-decoration: none;
+	font-weight: bold;
+	padding: 22px 4.55%;
+	font-size: 0.8vw;
+	line-height: 60px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	transition: background-color 0.25s;
+}
+
+#navbar a:hover {
+	background-color: teal;
+}
+
+#main-content {
+	box-shadow: 10px 10px 80px #000000;
+	border: 3px solid black;
+	width: 60%;
+	margin: auto;
+	background: linear-gradient(rgb(0, 39, 83) 60px, #eee 100px);
+}
+
+#article {
+	padding: 20px;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+h1 {
+	color: white;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, black 7px 7px 4px;
+}
+
+img {
+	width: 50%;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+	#main-content {
+		width: 100%;
+	}
+
+	#navbar a {
+		font-size: 1.3vw;
+	}
+}

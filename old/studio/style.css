@@ -1,0 +1,70 @@
+@font-face {
+    font-family: minecraft;
+    src: url(resources/minecraft.ttf);
+}
+
+* {
+    image-rendering: pixelated;
+    font-family: "minecraft";
+}
+
+body {
+    background-image: url("images/bg.png");
+    background-size: contain;
+    margin: 0px;
+    overflow-x: hidden;
+    
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+}
+
+#main-content {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 20px black;
+    backdrop-filter: blur(12px);
+}
+
+img {
+    width: 32px;
+    height: 32px;
+}
+
+
+#java {
+    background-color: #c6c6c6;
+    border: 32px solid transparent;
+    border-radius: 20px;
+    border-image-source: url('images/border.png');
+    border-image-repeat: repeat;
+    border-image-slice: 12;
+    margin: 50px;
+}
+
+#result div {
+    display: inline;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+	#main-content {
+		width: 100%;
+	}
+
+	#navbar a {
+		font-size: 1.3vw;
+	}
+}

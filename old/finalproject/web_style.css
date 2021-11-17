@@ -1,0 +1,237 @@
+/*notepad font*/
+@font-face {
+	font-family: fixedsys;
+	src: url(resources/fixedsys.woff);
+}
+
+body {
+	font-family: sans-serif;
+    background-image: url("resources/Windows98.png");
+	margin: 0px;
+}
+
+#wallpaper-box {
+	width: 100%;
+	margin: auto;
+}
+
+#select-box {
+	width: 50%;
+	left: 25%;
+}
+
+
+
+
+
+.not-taskbar button {
+	background: linear-gradient(20deg, #FFFFFF, #7EAFD9) !important;
+	font-family: feniceStd-Oblique;
+	font-size: 17px;
+}
+
+#start-menu  {
+	width: 121px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	bottom: 30px;
+	z-index: 99999999;
+}
+
+#start-menu button{
+	width: 120px;
+	line-height: 30px;
+}
+
+
+
+
+
+
+/*notepad*/
+.window1 {
+	position: absolute;
+	display: block;
+	padding: 3px;
+	margin: 20px;
+	top: 2%;
+	left: 2%;
+	width: 442px;
+	
+}
+
+/*the !important overrides 98.css's font and font size*/
+textarea {
+	font-family: fixedsys !important;
+	font-size: 16px !important;
+	overflow: scroll;
+}
+
+/*control panel*/
+.window2 {
+	position: absolute;
+	display: block;
+	padding: 3px;
+	margin: 20px;
+	top: 11%;
+	right: 4%;
+	width: 404px;
+}
+
+
+/*paint*/
+.window3 {
+	position: absolute;
+	display: block;
+	padding: 3px;
+	margin: 20px;
+	top: 47%;
+	left: 3%;
+}
+
+/*ie*/
+.window4 {
+	position: absolute;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	width: 764px;
+	margin: auto;
+	top: 15%;
+	left: 30%;
+}
+
+
+#paint-img {
+	margin: 0px;
+}
+
+#monitor {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+
+h1 {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 40px !important;
+}
+
+h2 {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 30px !important;
+}
+
+/* um */
+.window4-body.window-body.not-taskbar {
+	margin-top: 5px;
+	margin: 2px;
+}
+
+#ie-content {
+	background-image: url("resources/beige.gif");
+	border: 1px solid black;
+	height: 450px;
+	overflow: scroll;
+}
+
+#ie-left-column > p {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: large;
+	margin: 5px;
+}
+
+.topnav {
+	background-color: #222222;
+	padding: 20px;
+	left: 0px;
+	overflow: visible;
+	right: 0px;
+	top: -5px;
+	z-index: 10000;
+	margin: 0;
+	line-height: 40px;
+	transition: all 0.6s;
+	position: relative;
+}
+
+
+.topnav a {
+	float: none;
+	transition: all 0.2s;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px 10px;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+	font-size: 14px;
+}
+
+.topnav a.active {
+	background-color: rgb(108, 123, 141);
+	color: white;
+}
+
+
+
+.taskbar {
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+.taskbar-items {
+	padding: 1px !important;
+	margin: 1px !important;
+	display: block;
+	flex-direction: row;
+}
+
+#web1image {
+	width: 40%;
+}
+
+#web2image {
+	width: 40%;
+}
+
+
+
+@media only screen and (max-width: 1800px) {
+
+	/*notepad*/
+.window1 {
+	top: 2%;
+	left: 2%;
+	
+}
+/*control panel*/
+.window2 {
+	top: 1050px;
+	left: 2%;
+}
+
+
+/*paint*/
+.window3 {
+	top: 1400px;
+	left: 2%;
+}
+
+/*ie*/
+.window4 {
+	top: 450px;
+	left: 2%;
+}
+
+	
+
+}

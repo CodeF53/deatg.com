@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>webbtstie</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="deatg">
+      <meta name="description" content="deatg website">
+      <meta property="og:title" content="webbtstie">
+      <meta property="og:description" content="deatg website">
+      <meta property="og:image" content="/some-image.png">
+      <meta property="og:url" content="/this-page.html">
+      <meta property="og:site_name" content="Your Site Name">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image:alt" content="image description">
+      <link href="comingsoon_style.css" rel="stylesheet">
+      <link rel="icon" type="image/svg+xml" href="old/png/example.png">
+    </head>
+    <body onload="Start()">
+        <div id="banner">
+            <div id="center-text">coming soon</div>
+        </div><br><br><br><br>
+        <br><br><br><br>
+        <br><br><br><br>a
+
+
+
+        <script>
+            
+            let messages = ["coming soon","coming soon","Coming soon","Coming Soon","Coming Soon","COMING SOON","近日公開","cOMING sOON","ＣＯＭＩＮＧ　ＳＯＯＮ","ｃｏｍｉｎｇ　ｓｏｏｎ","soon coming"]
+            let id = "";
+
+            let fonts = ["Arial, sans-serif", "Helvetica, sans-serif", "Verdana, sans-serif", "Trebuchet MS, sans-serif", "Gill Sans, sans-serif", "Noto Sans, sans-serif", "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif", "Optima, sans-serif", "Arial Narrow, sans-serif", "sans-serif", "Times, Times New Roman, serif", "Didot, serif", "Georgia, serif", "Palatino, URW Palladio L, serif", "Bookman, URW Bookman L, serif", "New Century Schoolbook, TeX Gyre Schola, serif", "American Typewriter, serif", "serif", "Andale Mono, monospace", "Courier New, monospace", "Courier, monospace", "FreeMono, monospace", "OCR A Std, monospace", "DejaVu Sans Mono, monospace", "monospace", "Comic Sans MS, Comic Sans, cursive", "Apple Chancery, cursive", "Bradley Hand, cursive", "Brush Script MT, Brush Script Std, cursive", "Snell Roundhand, cursive", "URW Chancery L, cursive", "cursive", "Impact, fantasy", "Luminari, fantasy", "Chalkduster, fantasy", "Jazz LET, fantasy", "Blippo, fantasy", "Stencil Std, fantasy", "Marker Felt, fantasy", "Trattatello, fantasy", "fantasy"]
+            let cool_fonts = ["ArchivoBlack-Regular", "fixedsys","HindSiliguri-Regular","minecraft","minecraftbold","papyrus","precious","DelaGothicOne-Regular","SigmarOne-Regular"]
+
+            function Next(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function Start()
+            {
+                setInterval(CreateText, 400);
+            }
+
+            function Insert(str, index, value) {
+                return str.substr(0, index) + value + str.substr(index);
+            }
+
+            function CreateText()
+            {
+                if (Math.floor(Math.random() * 2) == 0)
+                {
+                    id = Math.random().toString(36).substring(7);
+                    let AMessage = document.createElement("p");
+                    AMessage.innerHTML = `<p class="moving-message right" id="${id}">${messages[Math.floor(Math.random()*messages.length)]}<p>`;
+                    document.body.appendChild(AMessage);
+                    let theElement = document.getElementById(id);
+                    theElement.style.top = `${Next(0, document.documentElement.scrollHeight)}px`;
+
+                    if (Math.floor(Math.random() * 4) <= 2)
+                    {
+                        theElement.style.fontFamily = fonts[Math.floor(Math.random()*fonts.length)]
+                    } else
+                    {
+                        theElement.style.fontFamily = cool_fonts[Math.floor(Math.random()*cool_fonts.length)]
+                    }
+                    
+                    if (Math.floor(Math.random() * 81) == 1)
+                    {
+                        theElement.style.fontSize = `${Next(60, 120)}px`;
+                    } else if (Math.floor(Math.random() * 201) == 1)
+                    {
+                        theElement.style.fontSize = `${Next(200, 300)}px`;
+                    } else
+                    { 
+                        theElement.style.fontSize = `${Next(3, 35)}px`;
+                    }
+                    
+                    theElement.style.animation=`move-right ${Next(800, 4000)}s normal forwards`;
+                    theElement.style.animationTimingFunction="linear";
+                    theElement.style.animationIterationCount="1";
+                    theElement.style.whiteSpace="nowrap";
+                    setTimeout(DeleteTheMessage, 40000, id);
+                    if (theElement.innerHTML.length > 400)
+                    {
+                        theElement.innerHTML = Insert(theElement.innerHTML, 400, "<br>");
+                    }
+
+                } else
+                {
+                    id = Math.random().toString(36).substring(7);
+                    let AMessage = document.createElement("p");
+                    AMessage.innerHTML = `<p class="moving-message left" id="${id}">${messages[Math.floor(Math.random()*messages.length)]}<p>`;
+                    document.body.appendChild(AMessage);
+                    let theElement = document.getElementById(id);
+                    theElement.style.top = `${Next(0, document.documentElement.scrollHeight)}px`;
+
+                    if (Math.floor(Math.random() * 4) <= 2)
+                    {
+                        theElement.style.fontFamily = fonts[Math.floor(Math.random()*fonts.length)]
+                    } else
+                    {
+                        theElement.style.fontFamily = cool_fonts[Math.floor(Math.random()*cool_fonts.length)]
+                    }
+
+                    if (Math.floor(Math.random() * 81) == 1)
+                    {
+                        theElement.style.fontSize = `${Next(60, 120)}px`;
+                    } else if (Math.floor(Math.random() * 201) == 1)
+                    {
+                        theElement.style.fontSize = `${Next(200, 300)}px`;
+                    } else
+                    { 
+                        theElement.style.fontSize = `${Next(3, 35)}px`;
+                    }
+
+                    theElement.style.animation=`move-left ${Next(800, 4000)}s normal forwards`;
+                    theElement.style.animationTimingFunction="linear";
+                    theElement.style.animationIterationCount="1";
+                    theElement.style.whiteSpace="nowrap";
+                    setTimeout(DeleteTheMessage, 40000, id);
+                    if (theElement.innerHTML.length > 400)
+                    {
+                        theElement.innerHTML = Insert(theElement.innerHTML, 400, "<br>");
+                    }
+                }
+                
+            }
+
+            function DeleteTheMessage(id)
+            {
+                var elem = document.getElementById(id).parentElement;
+                elem.remove();
+            }
+
+            
+
+        </script>
+    </body>
+
+
+</html>

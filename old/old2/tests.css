@@ -1,0 +1,25 @@
+body {
+    background: linear-gradient(95deg, rgb(175, 179, 179), lightgray);
+  
+}
+
+.href {
+  font-size: 16px; 
+  font-family: "calibri", Garamond, 'Comic Sans MS';
+}
+
+.wwoah {
+  opacity: 0.01;
+  font-family: "calibri", Garamond, 'Comic Sans MS';
+}
+
+.js {
+  font-size: 16px;
+  opacity: 0.04;
+  font-family: "calibri", Garamond, 'Comic Sans MS';
+}
+
+
+.q {
+ color: black; text-decoration: none;
+}

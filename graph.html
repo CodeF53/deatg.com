@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>graphe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>graphe</title>
+    <link rel="shortcut icon" href="old/png/example.png" >
+    
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=k-0Xt_WL5h3OjxVKuorngEnpG_XNm2eNGw7AJBUsh7k-lpbyLwg2AU8rpfsyvmSqcjraaCxKa8635Gm45OhUvkbEtNMuzROj8UvrrmCs4xM" charset="UTF-8"></script><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lmmc1Wzvlkz3ILnztqx5Xo8xNZxOvvZWXwYKMcBgpo5llpMGQLlfGkYsDLqAVW_6aesW4_Xd7qbBD4ba1GqiukbvhiiAUk37DtaLQPV7TUs" charset="UTF-8"></script></head>
+
+<body onload="moveGraph2()">
+
+<h1 id="a">look at this graph</h1>
+
+<button onclick="moveGraph()">a</button>
+<button onclick="moveGraph2()">a 2</button>
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+
+var data;
+var amount = 4;
+var amount2 = 3;
+var amount3 = 2;
+var amount4 = 1;
+var amount5 = 7;
+
+function drawChart() {
+  data = google.visualization.arrayToDataTable([
+  ['Task', 'GRApH'],
+  ['Option A', amount5],
+  ['33333', amount4],
+  ['TV', amount3],
+  ['HTML', amount2],
+  ['ok', amount]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'GRApH', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+var count = 1;
+
+function moveGraph() {
+  amount += Math.random() * Math.random() * 10;
+  drawChart();
+}
+function moveGraph2() {
+  count++;
+  amount += Math.random() * Math.random() * count * count;
+  amount2 += Math.random() * Math.random() * 1;
+  amount3 += Math.random() * Math.random() * 5;
+  amount4 += Math.random() * Math.random() * 12;
+  amount5 += Math.random() * Math.random() * 3;
+  drawChart();
+}
+</script>
+
+
+
+</body>
+</html>

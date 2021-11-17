@@ -12,7 +12,7 @@
         width: 45%; 
         border: 1px solid black; 
         padding: 3%; 
-        background-color: grey; 
+        background-color: white; 
         margin: 2% 23% 2% 23%;  
       }
       #images {

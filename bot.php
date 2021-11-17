@@ -84,7 +84,8 @@
 
             while ($row = pg_fetch_row($rs)) {
               echo "$row[0],$row[1],$row[2]|";
-              
+              echo "$json_decode[0], $json_decode[1], $json_decode[2]";
+              echo "<img src=\"https://cdn.discordapp.com/avatars/$row[0]/$json_decode[2].webp?size=80\"/>";
             }
 
             echo $database_data;

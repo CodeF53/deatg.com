@@ -83,7 +83,7 @@
               //echo "$row[0],$row[1],$row[2]|";
               $json_get = file_get_contents("https://discord.com/api/v9/users/$row[0]", false, $json_context);
               $json_decode = json_decode($json_get, true);
-              echo "<div class=\"user\"> <img src=\"https://cdn.discordapp.com/avatars/" . $row[0] . "/" . $json_decode["avatar"] . ".webp?size=80\"/> <p>" . $json_decode["username"] . "#" . $json_decode["discriminator"] . ":level " . $row[2] . ", xp " . $row[1] . "</p> </div>";
+              echo "<div class=\"user\"> <img src=\"https://cdn.discordapp.com/avatars/" . $row[0] . "/" . $json_decode["avatar"] . ".webp?size=80\"/> <p>" . $json_decode["username"] . "#" . $json_decode["discriminator"] . "</p><p>level " . $row[2] . ", xp " . $row[1] . "</p> </div>";
             }
 
             echo $database_data;

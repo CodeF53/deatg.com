@@ -80,11 +80,11 @@
            }
 
             while ($row = pg_fetch_row($rs)) {
-              echo "$row[0],$row[1],$row[2]|";
+              //echo "$row[0],$row[1],$row[2]|";
               $json_get = file_get_contents("https://discord.com/api/v9/users/$row[0]", false, $json_context);
               $json_decode = json_decode($json_get, true);
               echo "$json_decode[0], $json_decode[1], $json_decode[2]";
-              echo "<img src=\"https://cdn.discordapp.com/avatars/" . $row[0] . "/" . $json_decode["avatar"] . ".webp?size=80\"/>";
+              echo "<div class=\"user\"> <img src=\"https://cdn.discordapp.com/avatars/" . $row[0] . "/" . $json_decode["avatar"] . ".webp?size=80\"/> <p>" . $json_decode["username"] . "#" . $json_decode["discriminator"] . ":level " . $row[1] . ", xp " . $row[2] . "</p> </div>";
             }
 
             echo $database_data;

@@ -12,9 +12,8 @@
         width: 45%; 
         border: 1px solid black; 
         padding: 3%; 
-        background-color: white; 
+        background-color: grey; 
         margin: 2% 23% 2% 23%;  
-        background-image: url('old/png/discord2.PNG');
       }
       #images {
         width: 55%; 
@@ -40,7 +39,7 @@
         <div id="header">
            <a href="index.html"><img src="old/png/back.png"/></a><br>
            <h1>bot of deatg</h1>
-           <img src="old/png/bot_small.png" alt="bot" style="width: 100%;" onclick="GetData()"/>
+           <img src="old/png/bot_small.png" alt="bot" style="width: 100%;"/>
            <a href="https://discord.com/api/oauth2/authorize?client_id=847900236071567390&permissions=0&scope=bot" style="font-size: 25px;">click here to invite bot to server</a>
         </div>
         <div id="leaderboard">

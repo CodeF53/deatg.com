@@ -57,7 +57,7 @@
             $con = pg_connect("host=$host dbname=$dbname user=$user password=$password")
                 or die ("Could not connect to server\n"); 
 
-            $query = "SELECT * FROM users ORDER BY xp desc LIMIT 30"; 
+            $query = "SELECT * FROM users ORDER BY xp desc LIMIT 100"; 
 
             $rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
 

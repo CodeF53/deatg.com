@@ -43,6 +43,9 @@
 	src: url(resources/SigmarOne-Regular.ttf);
 }
 
+div.image-links > div > div {
+    cursor: pointer;
+}
 
 .moving-message {
     position: absolute;
@@ -52,14 +55,12 @@
 }
 
 
-
-
-
 body {
     background-image: url("resources/Banner.jpg");
     background-size: cover;
     margin: 0px;
     overflow-x: hidden;
+    transition: all 1s;
 }
 
 
@@ -134,21 +135,18 @@ p, a{
   }
 
 #links {
-    margin: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
     width: 70%;
     background: rgba(255, 255, 255, 0.5);
     background-blend-mode: multiply;
     position: absolute;
     z-index: 2;
     top: 40%;
-    
+    transition: all 1s;
     backdrop-filter: blur(2px);
     border: 2px solid black;
     border-radius: 7px;
-}
-
-#other {
-
 }
 
 #social-links {
@@ -217,14 +215,23 @@ p, a{
 .image-links {
     border: 2px solid black;
     border-radius: 10px;
-    height: auto !important;
     width: 450px;
+    height: 450px;
     opacity: 0.85;
     padding: 15px;
     margin: 5% 5%;
     box-shadow: black 2px 2px 4px;
     backdrop-filter: blur(4px);
 
+}
+
+.vertical-align {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-flex-container {
@@ -313,6 +320,7 @@ img {
     text-shadow:rgb(34, 0, 66) 5px 5px 3px;
     font-size: 28px;
     color: white;
+    margin-left: 22px;
 }
 
 .feature:hover, .creation:hover, .legacy:hover, .other:hover {
@@ -378,7 +386,31 @@ img {
 }
 
 
+@media only screen and (max-width: 1200px) {
 
+    body {
+        background-image: url("resources/BannerDouble.jpg");
+    }
+
+    #links {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    body {
+        background-image: url("resources/BannerDouble.jpg");
+    }
+
+    #links {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -388,6 +420,7 @@ img {
 
     #links {
         width: 100%;
-        margin: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }

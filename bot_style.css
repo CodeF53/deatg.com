@@ -152,11 +152,6 @@ nav a.active {
 }
 
 
-#rules-image:hover {
-    cursor: pointer;
-}
-
-
 #join-discord-section {
     background-color: #0E1218;
     display: flex;

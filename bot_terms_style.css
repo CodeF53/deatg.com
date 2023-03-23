@@ -1,0 +1,398 @@
+@font-face {
+    font-family: Ginto-Nord;
+    src: url(resources/GintoNordRegular.woff2.ttf);
+}
+
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background: #0E1218;
+}
+
+h1, h2, h3, h4, p {
+    font-family: Ginto-Nord;
+    color: white;
+    text-align: left;
+}
+
+.button {
+    background-color: #5865F2;
+    color: white;
+    align-self: center;
+    padding: 10px 16px 10px 16px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+
+/* navbar styles */
+
+nav {
+    overflow: visible;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    box-shadow: 2px 2px 8px black;
+    backdrop-filter: blur(12px);
+}
+  
+nav a {
+    color: #f2f2f2;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.25rem;
+    font-family: Ginto-Nord;
+    text-shadow: 2px 2px 3px black;
+    font-weight: 600;
+    padding: 12px;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+nav a:hover {
+    color: #5865F2;
+}
+  
+nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#hidden-menu {
+    display: none;
+}
+
+#dropdown-button {
+    display: none;
+}
+
+
+/* bg image styles */
+
+#bg-image-container {
+    height: 1060px;
+    background-image: url(old/png/bot_small.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: 3px solid #5865F2;
+}
+
+#top-bg-header {
+    text-shadow: 6px 6px 2px black;
+    font-size: 120px;
+    position: relative;
+}
+
+#top-bg-article {
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    position: relative;
+}
+
+
+
+/* remaining section styles */
+#main-sections {
+    margin-top: 0px;
+    border-bottom: 3px solid #5865F2;
+    background: #161727;
+}
+
+/* discord section styles */
+
+
+.discord-section h1 {
+    margin-top: 0px;
+    padding-top: 15px;
+    font-size: 32px;
+}
+
+.discord-section p {
+    font-size: 24px;
+}
+
+.discord-section.content.dark {
+    background-color: #0E1218;
+}
+
+#discord-header-section {
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+.discord-section.content {
+    padding-left: 7%;
+    padding-right: 7%;
+    display: flex;
+    gap: 80px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.discord-section.content img {
+    width: 100%;
+    border: 4px solid #2a2d31;
+    border-radius: 10px;
+}
+
+.image-side {
+    width: 40%;
+}
+
+.text-side {
+    width: 100%;
+}
+
+
+#join-discord-section {
+    background-color: #0E1218;
+    display: flex;
+    flex-direction: column;
+}
+
+#special-button {
+    font-size: 30px;
+    padding: 20px 32px 20px 32px;
+    background-size: 300% 100%;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0px 0px 15px 0 rgba(23, 168, 108, 0.75);
+    transition: all .4s ease-in-out;
+}
+
+#special-button:hover {
+    background-position: 100% 0;
+    filter: hue-rotate(50deg);
+    box-shadow: 0px 0px 40px 0 rgba(23, 168, 108, 0.75);
+}
+
+#special-button:focus {
+    outline: none;
+}
+
+#contact-button {
+    transition: all 0.3s;
+}
+
+#contact-button:hover {
+    filter: brightness(110%);
+    box-shadow: 0px 0px 20px 0 rgba(1, 146, 243, 0.75);
+}
+
+.svg {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+/* links section styles */
+
+#social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7%;
+}
+
+#social-links img {
+    transition: filter 0.5s;
+}
+
+#social-links img:hover {
+    cursor: pointer;
+    filter: saturate(300%)
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#credits p {
+    font-size: 14px;
+}
+
+#credits {
+    font-family: Ginto-Nord;
+}
+
+.coolguy {
+    color: white;
+    text-decoration: none;
+    transition: all 0.8s;
+}
+.coolguy:hover {
+    color: rgb(0, 158, 231);
+    filter:saturate(1000%);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* animations and fade in effect */
+
+.fade-in {
+    animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; filter: blur(3px) }
+    to   { opacity: 1; filter: blur(0px) }
+}
+
+@keyframes greyfade {
+    from { filter: contrast(0%); }
+    to { filter: contrast(100%); }
+}
+
+@keyframes rainbow {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #08e600, 0 0 40px #2300e6, 0 0 50px #e6d700, 0 0 60px #00b8e6, 0 0 70px #e60000; }
+    to { text-shadow: 0 0 20px #fff, 0 0 30px #00aeff, 0 0 40px #ff4dd3, 0 0 50px #d8ff4d, 0 0 60px #4dffd8, 0 0 70px #ff8e4d, 0 0 80px #4deaff; }
+}
+
+
+/* mobile styles */
+
+
+
+@media only screen and (max-width: 1100px) {
+
+
+    .discord-section.content {
+        padding-left: 7%;
+        padding-right: 7%;
+        display: flex;
+        gap: 80px;
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    
+    #main-sections {
+        padding: 0px !important;
+    }
+
+    .svg {
+        width: 100%;
+    }
+
+    .discord-section.content {
+        margin: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .discord-section.content.dark {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .image-side {
+        width: 92%;
+        margin-right: 1%;
+    }
+    
+    .text-side {
+        width: 90%;
+    }
+
+
+    .discord-section.content img {
+        width: 100%;
+        border: 4px solid #2a2d31;
+        border-radius: 10px;
+    }
+
+
+    #top-bg-header {
+        font-size: 100px;
+    }
+
+    #top-bg-article {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+    #dropdown-button {
+        display: inline-block;
+        border: none;
+        background-color: #5865F2;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+
+    #dropdown-button:hover {
+        cursor: pointer;
+    }
+
+    #hidden-menu {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .hidden-menu-item:hover {
+        background-color: #5865F2;
+        color: white;
+        border-radius: 3px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #social-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #social-links img {
+        width: 100px;
+    }
+
+    #main-sections {
+        padding: 10px;
+    }
+
+    #bg-image-container {
+        height: 550px;
+    }
+    
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

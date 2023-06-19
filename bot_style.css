@@ -26,6 +26,53 @@ h1, h2, h3, h4, p {
     font-size: 25px;
 }
 
+#closeButton {
+    float: right;
+    color: black;
+}
+
+#closeButton:hover {
+    cursor: pointer;
+}
+
+#blur.active {
+    filter: blur(10px);
+    transition: 0.5s;
+}
+
+#blur.active {
+    transition: 0.5s;
+}
+
+#popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 50px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+#popup.active {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
+    background: white;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
 .button:hover {
     cursor: pointer;
 }

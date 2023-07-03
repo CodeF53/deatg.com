@@ -120,24 +120,23 @@
         
         
         <div id="popup">
-            <p id="closeButton">✖</p>
-            <br>
-            <br>
+            <p id="closeButton" style="color:white;" onclick="togglePopup()">✖</p>
             <br>
             <form id="form">
                 <div class="field">
-                  <label for="from_name">from_name</label>
+                  <label for="from_name">discord username:</label>
                   <input type="text" name="from_name" id="from_name">
                 </div>
-                <div class="field">
-                  <label for="reply_to">reply_to</label>
-                  <input type="text" name="reply_to" id="reply_to">
-                </div>
-              
-                <input type="submit" class="header-text button" id="contact-button" value="Send Email" >
+                <p style="text-align: left;">Note: no personal data is stored by the bot, only the number of messages, money, and items are stored. You can still request deletion of this data if you want to though!</p>
+                <input type="submit" class="header-text button" id="send-button" value="Request Deletion" >
               </form>
-            <h1 class="header-text button" id="contact-button" onclick="togglePopup()">Request Deletion of your Data</h1>
         </div>
+        <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>     
+
+        <script type="text/javascript">
+          emailjs.init('VcjsYkfR65fUvN-bR')
+        </script>
         <script type="text/javascript">
             function togglePopup(){
                 var blur = document.getElementById("blur");
@@ -145,6 +144,27 @@
                 var popup = document.getElementById("popup");
                 popup.classList.toggle("active");
             }
+
+            const btn = document.getElementById("send-button");
+
+            document.getElementById("form")
+             .addEventListener("submit", function(event) {
+               event.preventDefault();
+            
+               btn.value = "Sending...";
+            
+               const serviceID = "default_service";
+               const templateID = "template_6bkjuyc";
+            
+               emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                  btn.value = "Send Email";
+                  alert("Sent!");
+                }, (err) => {
+                  btn.value = "Send Email";
+                  alert(JSON.stringify(err));
+                });
+            });
         </script>
 
     </body>

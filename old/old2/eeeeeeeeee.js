@@ -1,13 +1,13 @@
 var quotes = [
-  'e'
-  'ee'
-  'eee'
-  'eeee'
-  'eeeee'
-  'eeeeee'
-  'eeeeeee'
-  'eeeeeeee'
-  'eeeeeeeee'
+  'e',
+  'ee',
+  'eee',
+  'eeee',
+  'eeeee',
+  'eeeeee',
+  'eeeeeee',
+  'eeeeeeee',
+  'eeeeeeeee',
   'eeeeeeeeee'
 ]
 
@@ -26,7 +26,6 @@ function newQuote() {
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="https://cdn3.imggmi.com/uploads/2019/10/1/da393440f0c8a509a0e585b3fefdcd59-full.png" >
   </head>
 
 

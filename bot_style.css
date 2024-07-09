@@ -11,7 +11,7 @@ body {
     background: #0E1218;
 }
 
-h1, h2, h3, h4, p, label {
+h1, h2, h3, h4, p, label, input {
     font-family: Ginto-Nord;
     color: white;
     text-align: center;

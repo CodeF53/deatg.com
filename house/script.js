@@ -78,7 +78,6 @@ window.addEventListener("resize", function () {
     engine.resize();
 });
 
-
 // Add VR button
 var vrButton = document.createElement("button");
 vrButton.textContent = "Enter VR";
@@ -88,9 +87,21 @@ vrButton.style.left = "20px";
 document.body.appendChild(vrButton);
 
 vrButton.addEventListener("click", function() {
-    scene.createDefaultXRExperienceAsync({
-        floorMeshes: [scene.getMeshByName("ground")]
-    }).then((xrExperience) => {
-        xrExperience.enterXRAsync("immersive-vr", "local-floor");
-    });
+    if (navigator.xr) {
+        navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+            if (supported) {
+                scene.createDefaultXRExperienceAsync({
+                    floorMeshes: [scene.getMeshByName("ground")]
+                }).then((xrExperience) => {
+                    xrExperience.baseExperience.enterXRAsync('immersive-vr', 'local-floor');
+                });
+            } else {
+                console.log("VR not supported on this device");
+                alert("VR not supported on this device");
+            }
+        });
+    } else {
+        console.log("WebXR not available in this browser");
+        alert("WebXR not available in this browser");
+    }
 });

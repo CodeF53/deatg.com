@@ -1,6 +1,18 @@
 var canvas = document.getElementById("renderCanvas");
 var engine = new BABYLON.Engine(canvas, true);
 
+if (navigator.xr) {
+    navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+        if (supported) {
+            console.log("VR is supported");
+        } else {
+            console.log("VR is not supported");
+        }
+    });
+} else {
+    console.log("WebXR is not available");
+}
+
 var createScene = function () {
     var scene = new BABYLON.Scene(engine);
 
